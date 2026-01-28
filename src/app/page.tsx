@@ -12,6 +12,7 @@
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
+import HeroHeadline from '@/components/ui/HeroHeadline';
 
 export default function Home() {
   return (
@@ -54,25 +55,8 @@ export default function Home() {
             {/* Content Column */}
             <div className="flex-1 lg:pr-8">
 
-              {/* Main Headline - TYPOGRAPHIC HERO */}
-              <h1 className="mb-8 lg:mb-12">
-                <span 
-                  className="block text-display leading-tight"
-                  style={{ fontFamily: 'var(--font-playfair), Georgia, serif', fontWeight: 700 }}
-                >
-                  Copy that thinks.
-                </span>
-                <span 
-                  className="block text-display leading-tight"
-                  style={{ fontFamily: 'var(--font-playfair), Georgia, serif', fontWeight: 700 }}
-                >
-                  Then <span className="relative inline-block">
-                    sells
-                    {/* Antique gold underline accent */}
-                    <span className="absolute -bottom-1 left-0 h-1 w-full bg-gold/60" />
-                  </span><span className="text-gold">.</span>
-                </span>
-              </h1>
+              {/* Main Headline - TYPOGRAPHIC HERO with typewriter effect */}
+              <HeroHeadline />
 
               {/* Supporting paragraph - exact copy */}
               <div className="prose-premium mb-10 max-w-[52ch] space-y-6 lg:mb-14">

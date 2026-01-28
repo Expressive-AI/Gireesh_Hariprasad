@@ -187,8 +187,19 @@ export default function Header() {
           mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        {/* Close button */}
-        <div className="flex h-20 items-center justify-end px-6">
+        {/* Header with logo and close button */}
+        <div className="flex h-20 items-center justify-between px-6 border-b border-warm-200">
+          {/* Logo */}
+          <Link href="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img 
+              src="/images/logo.png" 
+              alt="Gireesh Hariprasad Logo" 
+              className="h-10 w-auto"
+            />
+          </Link>
+          
+          {/* Close button */}
           <button
             type="button"
             className="p-2 text-charcoal transition-opacity hover:opacity-60"
@@ -245,16 +256,16 @@ export default function Header() {
         <div className="absolute bottom-8 left-6 right-6 border-t border-warm-200 pt-6">
           <p className="text-sm text-charcoal-400">Get in touch</p>
           <a
-            href="mailto:hello@gireeshhariprasad.com"
+            href="mailto:gireesh2hariprasad@gmail.com"
             className="mt-2 block text-sm text-charcoal transition-colors hover:text-gold"
           >
-            hello@gireeshhariprasad.com
+            gireesh2hariprasad@gmail.com
           </a>
           <a
-            href="tel:+919744525239"
+            href="tel:+447778200054"
             className="mt-1 block text-sm text-charcoal transition-colors hover:text-gold"
           >
-            +91 9744525239
+            +44 7778 200054
           </a>
         </div>
       </div>
