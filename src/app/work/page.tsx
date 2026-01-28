@@ -5,10 +5,28 @@
  * Links to individual case study pages.
  */
 
+import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
-import { caseStudiesData, categoryLabels, type LocalCaseStudy } from '@/sanity/data/caseStudies';
+import { caseStudiesData, categoryLabels, type LocalCaseStudy } from '@/data/caseStudies';
+
+export const metadata: Metadata = {
+  title: 'Work',
+  description: 'Selected copywriting work by Gireesh Hariprasad. Case studies in advertising, brand voice, website copy, and content strategy.',
+  openGraph: {
+    title: 'Work | Gireesh Hariprasad Copywriter',
+    description: 'A curated collection of copywriting projects spanning advertising, websites, brand voice development, and long-form content.',
+    url: 'https://gireeshhariprasad.com/work',
+  },
+  twitter: {
+    title: 'Work | Gireesh Hariprasad Copywriter',
+    description: 'Selected copywriting work and case studies.',
+  },
+  alternates: {
+    canonical: 'https://gireeshhariprasad.com/work',
+  },
+};
 
 // Category-specific colors for visual distinction
 const categoryColors: Record<string, { bg: string; text: string; border: string }> = {
@@ -20,14 +38,14 @@ const categoryColors: Record<string, { bg: string; text: string; border: string 
   social: { bg: 'bg-cyan-50', text: 'text-cyan-700', border: 'border-cyan-200' },
 };
 
-// Placeholder images for each category
-const categoryImages: Record<string, string> = {
-  advertising: 'https://images.unsplash.com/photo-1542744094-24638eff58bb?w=600&h=400&fit=crop',
-  website: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-  longform: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&h=400&fit=crop',
-  brand: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
-  email: 'https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=600&h=400&fit=crop',
-  social: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop',
+// Project-specific images from local /images folder
+const projectImages: Record<string, string> = {
+  'zamosa-pet-grooming': '/images/zamosa/zamoa_pet-1.jpg',
+  'antler-play-gallery-cafe': '/images/antler/antler-1.jpg',
+  'philips-powerpro-vacuum-cleaner': '/images/philips/philips-1.webp',
+  'merryba-homepage': '/images/merryba/merryba-1.jpg',
+  'fos-advertisers-homepage': '/images/fos-advert/fos-1.jpg',
+  'chilampu-indian-dance-academy': '/images/chilampu/Bharathanatyam-1.jpg',
 };
 
 export default function WorkPage() {
@@ -61,7 +79,7 @@ export default function WorkPage() {
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
               {caseStudiesData.map((project: LocalCaseStudy, index: number) => {
                 const colors = categoryColors[project.category] || categoryColors.brand;
-                const imageUrl = categoryImages[project.category] || categoryImages.brand;
+                const imageUrl = projectImages[project.slug.current] || '/images/zamosa/zamoa_pet-1.jpg';
                 const year = project.publishedAt ? new Date(project.publishedAt).getFullYear() : '2025';
 
                 return (

@@ -15,6 +15,7 @@ import { useEffect, useState } from 'react';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
+  { name: 'Skills', href: '/skills' },
   { name: 'Work', href: '/work' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -63,15 +64,38 @@ export default function Header() {
           aria-label="Main navigation"
         >
           <div className="flex h-20 items-center justify-between lg:h-24">
-            {/* Logo / Copywriter Name */}
+            {/* Logo */}
             <Link
               href="/"
-              className="font-serif text-xl font-medium tracking-tight text-charcoal transition-opacity duration-300 hover:opacity-60 sm:text-2xl"
+              className="group flex items-center gap-3 transition-opacity duration-300 hover:opacity-80"
             >
-              Gireesh Hariprasad
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img 
+                src="/images/logo.png" 
+                alt="Gireesh Hariprasad Logo" 
+                className="h-10 w-auto sm:h-12 lg:h-14"
+              />
+              <div className="flex flex-col">
+                <span 
+                  className="text-xl tracking-wide text-charcoal sm:text-2xl lg:text-3xl"
+                  style={{ 
+                    fontFamily: "'Gravitas One', cursive",
+                    letterSpacing: '0.02em',
+                    textShadow: '0 2px 4px rgba(31, 26, 24, 0.08)'
+                  }}
+                >
+                  Gireesh Hariprasad
+                </span>
+                <span 
+                  className="mt-0.5 text-xs font-normal tracking-[0.12em] text-charcoal-400 sm:text-sm"
+                  style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
+                >
+                  COPYWRITER
+                </span>
+              </div>
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation - Bebas Neue */}
             <ul className="hidden items-center gap-10 md:flex lg:gap-12">
               {navigation.map((item) => {
                 const isActive =
@@ -83,13 +107,14 @@ export default function Header() {
                     <Link
                       href={item.href}
                       className={`
-                        group relative text-meta-lg uppercase transition-colors duration-300
+                        group relative text-sm uppercase tracking-[0.12em] transition-all duration-300
                         ${
                           isActive
-                            ? 'text-charcoal font-medium'
+                            ? 'text-charcoal'
                             : 'text-charcoal-500 hover:text-charcoal'
                         }
                       `}
+                      style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
                     >
                       {item.name}
                       {/* Subtle underline on hover */}

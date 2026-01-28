@@ -2,12 +2,33 @@
  * About Page
  *
  * Personal story and approach to copywriting.
- * Warm, professional, authentic.
+ * Verbatim copy as specified.
+ * 
+ * Highlighted Catchphrase:
+ * - "A copywriter by training. A thinker by habit."
  */
 
+import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: 'A copywriter by training. A thinker by habit. Learn about Gireesh Hariprasad\'s approach to copywriting and his journey in advertising.',
+  openGraph: {
+    title: 'About Gireesh Hariprasad | Copywriter',
+    description: 'A copywriter by training. A thinker by habit. Beautiful words are pointless unless they move people.',
+    url: 'https://gireeshhariprasad.com/about',
+  },
+  twitter: {
+    title: 'About Gireesh Hariprasad | Copywriter',
+    description: 'A copywriter by training. A thinker by habit.',
+  },
+  alternates: {
+    canonical: 'https://gireeshhariprasad.com/about',
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -17,17 +38,30 @@ export default function AboutPage() {
       <main className="min-h-screen pt-32 lg:pt-40">
         {/* Hero Section */}
         <section className="container-padding mx-auto max-w-content-lg pb-16 lg:pb-24">
-          <span className="text-label mb-4 inline-block rounded-full bg-gold/10 px-3 py-1 text-gold">
+          <span 
+            className="mb-4 inline-block text-sm tracking-[0.12em] uppercase text-charcoal-500"
+            style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
+          >
             About
           </span>
-          <h1 className="text-display mb-6 max-w-[16ch]">
-            The craft behind the{' '}
-            <em className="font-normal italic text-gold">copy</em>.
+          
+          {/* TYPOGRAPHIC HERO */}
+          <h1 
+            className="mb-8 max-w-[18ch]"
+            style={{ 
+              fontFamily: 'var(--font-playfair), Georgia, serif',
+              fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+              fontWeight: 700,
+              lineHeight: 1.15,
+              letterSpacing: '-0.02em'
+            }}
+          >
+            A copywriter by <span className="relative inline-block">
+              training
+              <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-gold/50" />
+            </span>.<br />
+            A thinker by <span className="italic">habit</span>.
           </h1>
-          <p className="text-lead max-w-prose text-charcoal-500">
-            I believe every brand has a story worth telling. My job is to find it, 
-            refine it, and share it in a way that moves people to action.
-          </p>
         </section>
 
         {/* Two-column Content */}
@@ -38,135 +72,57 @@ export default function AboutPage() {
               <div className="lg:col-span-2">
                 <div className="sticky top-32">
                   {/* Photo */}
-                  <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="/images/gireesh.jpg"
-                      alt="Gireesh Hariprasad - Copywriter & Brand Storyteller"
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-
-                  {/* Quick Facts */}
-                  <div className="mt-8 rounded-lg border border-warm-200 bg-warm-50 p-6">
-                    <h3 className="mb-4 text-meta font-medium text-charcoal">Quick Facts</h3>
-                    <ul className="space-y-3 text-body-sm text-charcoal-600">
-                      <li className="flex items-start gap-3">
-                        <span className="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gold" />
-                        <span>10+ years in copywriting & content</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gold" />
-                        <span>Based in India, working globally</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gold" />
-                        <span>50+ brands & startups served</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="mt-0.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gold" />
-                        <span>Specializing in brand storytelling</span>
-                      </li>
-                    </ul>
+                  <div className="relative aspect-[3/4] overflow-hidden rounded-xl border border-warm-200">
+                    {/* Placeholder for photo */}
+                    <div className="absolute inset-0 bg-warm-100 flex items-center justify-center">
+                      <img src="/images/gireesh.jpg" alt="Gireesh Hariprasad Portfolio" className="w-full h-full object-cover"/>
+                    </div>
                   </div>
                 </div>
               </div>
-
               {/* Content Column */}
               <div className="lg:col-span-3">
-                <div className="prose-premium">
-                  <h2 className="text-subhead mb-6">Hello, I&apos;m Gireesh</h2>
+                <div className="prose-premium space-y-8">
+                  <p className="text-lead">
+                    I studied English language and literature because I love how words behave. How they persuade, provoke, soften resistance, and spark desire.
+                  </p>
                   
-                  <p>
-                    I&apos;m a copywriter who believes that <span className="highlight-gold font-medium">great writing isn&apos;t about clever words</span>—it&apos;s about 
-                    understanding people. What moves them, what matters to them, 
-                    what keeps them up at night.
+                  <p className="text-body-lg">
+                    But I didn&apos;t stop at theory. I learned the art and craft of copywriting the way it&apos;s meant to be learned — by understanding concepts, structure, audience psychology, and the commercial purpose behind every brief.
                   </p>
 
-                  <p>
-                    For over a decade, I&apos;ve been helping brands find their voice 
-                    and tell stories that <span className="highlight-gold font-medium">connect, persuade, and inspire action</span>. 
-                    From startups to established enterprises, I&apos;ve worked across 
-                    industries to craft copy that feels genuine and drives results.
-                  </p>
-
-                  <h3 className="text-heading mb-4 mt-12">My Approach</h3>
-
-                  <p>
-                    Every project starts with <span className="highlight-gold font-medium">listening</span>. I want to understand 
-                    your brand, your audience, and what success looks like for you. 
-                    Only then do I put pen to paper (or fingers to keyboard).
-                  </p>
-
-                  <p>
-                    I believe in <span className="highlight-gold font-medium">clarity over cleverness</span>, authenticity over hype, 
-                    and strategy over style. Good copy should feel effortless to 
-                    read—but that ease comes from careful thought and craft.
-                  </p>
-
-                  <div className="my-12 rounded-xl bg-warm-50 p-8">
-                    <blockquote className="text-pullquote m-0 border-none p-0">
-                      &ldquo;The best copy doesn&apos;t feel like copy at all. It feels 
-                      like a conversation with a friend who truly gets you.&rdquo;
-                    </blockquote>
+                  {/* Highlighted statement */}
+                  <div className="my-12 rounded-xl border border-gold/30 bg-gold/5 p-8">
+                    <p 
+                      className="text-subhead m-0"
+                      style={{ fontFamily: 'var(--font-playfair), Georgia, serif', fontWeight: 600 }}
+                    >
+                      I believe great copy is never written in isolation. It&apos;s built through <span className="relative inline-block">
+                        collaboration
+                        <span className="absolute -bottom-0.5 left-0 h-px w-full bg-gold/60" />
+                      </span>.
+                    </p>
                   </div>
 
-                  <h3 className="text-heading mb-4 mt-12">What I Do</h3>
+                  <p className="text-body-lg">
+                    I love working with designers, planners, strategists, and fellow idea people to create work that looks as good as it sounds — and works even better.
+                  </p>
 
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-4">
-                      <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gold/20 text-gold text-sm font-medium">1</span>
-                      <div>
-                        <strong className="text-charcoal">Brand Voice & Messaging</strong>
-                        <p className="mt-1 text-body-sm text-charcoal-500">
-                          Defining how your brand speaks—the tone, the personality, the words you use.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-4">
-                      <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gold/20 text-gold text-sm font-medium">2</span>
-                      <div>
-                        <strong className="text-charcoal">Website & Landing Page Copy</strong>
-                        <p className="mt-1 text-body-sm text-charcoal-500">
-                          Converting visitors into customers with clear, compelling web copy.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-4">
-                      <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gold/20 text-gold text-sm font-medium">3</span>
-                      <div>
-                        <strong className="text-charcoal">Campaign & Advertising Copy</strong>
-                        <p className="mt-1 text-body-sm text-charcoal-500">
-                          Campaigns that capture attention and drive action.
-                        </p>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-4">
-                      <span className="mt-1 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gold/20 text-gold text-sm font-medium">4</span>
-                      <div>
-                        <strong className="text-charcoal">Long-form & Editorial Content</strong>
-                        <p className="mt-1 text-body-sm text-charcoal-500">
-                          Articles, guides, and thought leadership that builds authority.
-                        </p>
-                      </div>
-                    </li>
-                  </ul>
+                  <p className="text-body-lg">
+                    I&apos;m happiest in environments where I&apos;m challenged daily. Where briefs are sharp, feedback is honest, and standards are high. That&apos;s where the best writing happens.
+                  </p>
                 </div>
 
                 {/* CTA */}
-                <div className="mt-16 rounded-xl border border-gold/30 bg-gold/5 p-8">
-                  <h3 className="text-subhead mb-4">Ready to work together?</h3>
-                  <p className="mb-6 text-body text-charcoal-500">
-                    I&apos;m currently accepting new projects. Let&apos;s talk about how 
-                    I can help your brand find its voice.
-                  </p>
+                <div className="mt-16">
                   <Link
-                    href="/contact"
-                    className="group inline-flex items-center gap-3 rounded-full bg-charcoal px-8 py-4 text-body font-medium text-ivory transition-all duration-300 hover:bg-gold hover:shadow-lg"
+                    href="/skills"
+                    className="group inline-flex items-center gap-3 rounded-full border-2 border-charcoal/30 px-8 py-4 text-sm uppercase tracking-[0.12em] text-charcoal transition-all duration-300 hover:-translate-y-0.5 hover:border-charcoal hover:tracking-[0.15em]"
+                    style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
                   >
-                    Get in touch
+                    See what I write
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                      →
+                      
                     </span>
                   </Link>
                 </div>

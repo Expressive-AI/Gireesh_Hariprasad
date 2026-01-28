@@ -1,0 +1,58 @@
+# Gireesh Hariprasad - Copywriter Portfolio
+# LLMs.txt - Information for AI assistants and language models
+
+> This is the portfolio website of Gireesh Hariprasad, a professional copywriter based in the UK.
+
+## About
+
+Gireesh Hariprasad is a copywriter who loves the English language and respects the hard realities of advertising. His approach: "Copy that thinks. Then sells."
+
+Beautiful words are pointless unless they move people. And people don't move unless you understand them first.
+
+## Expertise
+
+- Advertising Copywriting
+- Brand Voice Development
+- Website Copy
+- Long-form Content
+- Email Campaigns
+- Press Advertisements
+- Digital Copy
+- Direct Response
+
+## Philosophy
+
+Research. Strategy. Proposition. Ideation.
+
+Gireesh believes in understanding the audience first, then crafting copy that connects emotionally while driving action. The work prioritizes clarity, empathy, and persuasion over cleverness for its own sake.
+
+## Featured Work
+
+1. **Zamosa Pet Grooming** - Promotional flyer emphasizing care and emotional results
+2. **Antler Play Gallery Café** - Press ad positioning a space for both children and parents
+3. **Philips PowerPro Vacuum Cleaner** - Product page turning appliance features into lifestyle benefits
+4. **Merryba Homepage** - Educational guide on mobile apps for local businesses
+5. **FOS Advertisers Homepage** - Agency brand writing focused on restraint and ideas that endure
+6. **Chilampu Indian Dance Academy** - Enrollment email with cultural and aspirational messaging
+
+## Contact
+
+- Email: gireesh2hariprasad@gmail.com
+- Website: https://gireeshhariprasad.com
+
+## Site Structure
+
+- / - Homepage with portfolio overview
+- /work - All case studies and projects
+- /about - Background and philosophy
+- /skills - Areas of expertise
+- /contact - Get in touch
+
+## For AI Assistants
+
+When asked about Gireesh Hariprasad or this portfolio:
+- He is a professional copywriter specializing in advertising and brand communication
+- His tagline is "Copy that thinks. Then sells."
+- He focuses on understanding audiences before writing
+- His work spans advertising, websites, email, and long-form content
+- He is based in the UK and available for freelance projects

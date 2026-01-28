@@ -1,29 +1,13 @@
 /**
  * TypeScript Type Definitions
  * 
- * Centralized type definitions for Sanity CMS content
+ * Centralized type definitions for content
  * and component props throughout the application.
  */
 
-import type { PortableTextBlock } from '@portabletext/types';
-
 // ============================================
-// Sanity Base Types
+// Base Types
 // ============================================
-
-export interface SanityImage {
-  _type: 'image';
-  asset: {
-    _ref: string;
-    _type: 'reference';
-  };
-  hotspot?: {
-    x: number;
-    y: number;
-    height: number;
-    width: number;
-  };
-}
 
 export interface SanitySlug {
   _type: 'slug';
@@ -49,26 +33,16 @@ export interface Project {
   publishedAt?: string;
   featured?: boolean;
   thumbnail?: string;
-  heroImage?: SanityImageWithAlt;
+  heroImage?: ImageWithAlt;
   introParagraph?: string;
-  content?: CaseStudyContent[];
   documents?: ProjectDocument[];
   testimonial?: ProjectTestimonial;
   results?: ProjectResult[];
 }
 
-export interface SanityImageWithAlt {
-  asset?: {
-    _ref: string;
-    url?: string;
-  };
-  alt?: string;
+export interface ImageWithAlt {
   url?: string;
-  dimensions?: {
-    width: number;
-    height: number;
-    aspectRatio: number;
-  };
+  alt?: string;
 }
 
 export interface ProjectTestimonial {
@@ -81,49 +55,7 @@ export interface ProjectDocument {
   _key: string;
   title: string;
   description?: string;
-  file?: {
-    asset: {
-      _ref: string;
-      url?: string;
-    };
-  };
   externalUrl?: string;
-}
-
-export type CaseStudyContent = 
-  | PortableTextBlock 
-  | CaseStudyImage 
-  | CaseStudyDivider 
-  | CaseStudyPullQuote;
-
-export interface CaseStudyImage {
-  _type: 'image';
-  _key: string;
-  asset: {
-    _ref: string;
-    url?: string;
-  };
-  caption?: string;
-  alt?: string;
-  url?: string;
-  dimensions?: {
-    width: number;
-    height: number;
-    aspectRatio: number;
-  };
-}
-
-export interface CaseStudyDivider {
-  _type: 'divider';
-  _key: string;
-  style: 'line' | 'decorative' | 'spacer';
-}
-
-export interface CaseStudyPullQuote {
-  _type: 'pullQuote';
-  _key: string;
-  text: string;
-  attribution?: string;
 }
 
 export type ProjectCategory =
@@ -132,47 +64,7 @@ export type ProjectCategory =
   | 'email-campaign'
   | 'content-strategy'
   | 'product-copy'
-  | 'editorial';
-
-export interface ProjectResult {
-  metric: string;
-  value: string;
-  description?: string;
-}
-
-// ============================================
-// Case Study Type (New Schema)
-// ============================================
-
-/**
- * Case Study content type
- * Designed for copywriting portfolio showcases
- */
-export interface CaseStudy {
-  _id: string;
-  title: string;
-  slug: SanitySlug | string;
-  client: string;
-  category?: CaseStudyCategory;
-  excerpt: string;
-  publishedAt: string;
-  featured: boolean;
-  seoDescription?: string;
-  heroImage: {
-    url: string;
-    alt: string;
-    dimensions?: {
-      width: number;
-      height: number;
-      aspectRatio: number;
-    };
-  };
-  body: CaseStudyBodyContent[];
-  deliverables: string[];
-  attachments?: CaseStudyAttachment[];
-}
-
-export type CaseStudyCategory =
+  | 'editorial'
   | 'advertising'
   | 'website'
   | 'longform'
@@ -180,94 +72,10 @@ export type CaseStudyCategory =
   | 'email'
   | 'social';
 
-export type CaseStudyBodyContent =
-  | PortableTextBlock
-  | CaseStudyImage
-  | CaseStudyPullQuote;
-
-export interface CaseStudyAttachment {
-  _key: string;
-  title: string;
+export interface ProjectResult {
+  metric: string;
+  value: string;
   description?: string;
-  file: {
-    url: string;
-    originalFilename?: string;
-    size?: number;
-  };
-}
-
-/**
- * Service offering
- */
-export interface Service {
-  _id: string;
-  title: string;
-  slug: SanitySlug | string;
-  shortDescription: string;
-  fullDescription?: PortableTextBlock[];
-  icon?: string;
-  process?: ProcessStep[];
-  deliverables?: string[];
-  idealFor?: string[];
-}
-
-export interface ProcessStep {
-  step: number;
-  title: string;
-  description: string;
-}
-
-/**
- * Client testimonial
- */
-export interface Testimonial {
-  _id: string;
-  quote: string;
-  author: string;
-  role?: string;
-  company?: string;
-  avatar?: string;
-  featured?: boolean;
-}
-
-/**
- * About page content
- */
-export interface AboutPage {
-  headline: string;
-  introduction: string;
-  portraitImage?: string;
-  bio: PortableTextBlock[];
-  philosophy?: string;
-  expertise?: Expertise[];
-  credentials?: Credential[];
-}
-
-export interface Expertise {
-  title: string;
-  description: string;
-}
-
-export interface Credential {
-  title: string;
-  organization: string;
-  year?: string;
-}
-
-/**
- * Site settings
- */
-export interface SiteSettings {
-  title: string;
-  description?: string;
-  ogImage?: string;
-  email?: string;
-  socialLinks?: SocialLink[];
-}
-
-export interface SocialLink {
-  platform: 'linkedin' | 'twitter' | 'instagram';
-  url: string;
 }
 
 // ============================================
@@ -296,7 +104,12 @@ export interface SectionHeaderProps {
  * Props for testimonial card component
  */
 export interface TestimonialCardProps {
-  testimonial: Testimonial;
+  testimonial: {
+    quote: string;
+    author: string;
+    role?: string;
+    company?: string;
+  };
 }
 
 // ============================================

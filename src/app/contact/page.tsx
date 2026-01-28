@@ -1,12 +1,33 @@
 /**
  * Contact Page
  *
- * Simple, elegant contact page with email and social links.
+ * Verbatim contact copy as specified.
+ * 
+ * Highlighted Catchphrase:
+ * - "Let's make something that works."
  */
 
+import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: 'Get in touch with Gireesh Hariprasad for copywriting projects. Let\'s make something that works.',
+  openGraph: {
+    title: 'Contact Gireesh Hariprasad | Copywriter',
+    description: 'Get in touch for copywriting projects. Let\'s make something that works.',
+    url: 'https://gireeshhariprasad.com/contact',
+  },
+  twitter: {
+    title: 'Contact Gireesh Hariprasad | Copywriter',
+    description: 'Get in touch for copywriting projects.',
+  },
+  alternates: {
+    canonical: 'https://gireeshhariprasad.com/contact',
+  },
+};
 
 export default function ContactPage() {
   return (
@@ -16,16 +37,32 @@ export default function ContactPage() {
       <main className="min-h-screen pt-32 lg:pt-40">
         {/* Hero Section */}
         <section className="container-padding mx-auto max-w-content-lg pb-16 lg:pb-24">
-          <span className="text-label mb-4 inline-block rounded-full bg-gold/10 px-3 py-1 text-gold">
+          <span 
+            className="mb-4 inline-block text-sm tracking-[0.12em] uppercase text-charcoal-500"
+            style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
+          >
             Get in Touch
           </span>
-          <h1 className="text-display mb-6 max-w-[16ch]">
-            Let&apos;s create something{' '}
-            <em className="font-normal italic text-gold">remarkable</em>.
+          
+          {/* TYPOGRAPHIC HERO */}
+          <h1 
+            className="mb-8 max-w-[18ch]"
+            style={{ 
+              fontFamily: 'var(--font-playfair), Georgia, serif',
+              fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+              fontWeight: 700,
+              lineHeight: 1.15,
+              letterSpacing: '-0.02em'
+            }}
+          >
+            Let&apos;s make something that <span className="relative inline-block">
+              works
+              <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-gold/50" />
+            </span><span className="text-gold">.</span>
           </h1>
-          <p className="text-lead max-w-prose text-charcoal-500">
-            Whether you have a project in mind, a question about my work, or just want 
-            to say hello—I&apos;d love to hear from you.
+          
+          <p className="text-lead max-w-prose">
+            If you&apos;re an ad agency or business looking for a copywriter who understands craft, collaboration, and commercial outcomes, I&apos;d love to talk.
           </p>
         </section>
 
@@ -35,98 +72,95 @@ export default function ContactPage() {
             <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
               {/* Left Column - Contact Info */}
               <div>
-                <h2 className="text-subhead mb-8">Contact Information</h2>
+                <p className="text-body-lg mb-10">
+                  Whether it&apos;s a role, a project, or a conversation that leads somewhere interesting — let&apos;s start it.
+                </p>
                 
+                {/* Phone */}
+                <div className="mb-8">
+                  <span 
+                    className="mb-2 block text-sm tracking-[0.12em] uppercase text-charcoal-400"
+                    style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
+                  >
+                    Mobile (UK)
+                  </span>
+                  <a
+                    href="tel:+447778200054"
+                    className="group inline-flex items-center gap-2 text-body-lg font-medium text-charcoal transition-colors hover:text-gold"
+                  >
+                    07778 200054
+                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                      
+                    </span>
+                  </a>
+                </div>
+
                 {/* Email */}
                 <div className="mb-8">
-                  <span className="text-label mb-2 block text-charcoal-400">Email</span>
+                  <span 
+                    className="mb-2 block text-sm tracking-[0.12em] uppercase text-charcoal-400"
+                    style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
+                  >
+                    Email
+                  </span>
                   <a
                     href="mailto:hello@gireeshhariprasad.com"
                     className="group inline-flex items-center gap-2 text-body-lg font-medium text-charcoal transition-colors hover:text-gold"
                   >
-                    hello@gireeshhariprasad.com
+                    gireesh2hariprasad@gmail.com
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                      →
+                      
                     </span>
                   </a>
                 </div>
 
-                {/* Phone */}
-                <div className="mb-8">
-                  <span className="text-label mb-2 block text-charcoal-400">Phone</span>
-                  <a
-                    href="tel:+919744525239"
-                    className="group inline-flex items-center gap-2 text-body-lg font-medium text-charcoal transition-colors hover:text-gold"
+                {/* Address */}
+                <div className="mb-10">
+                  <span 
+                    className="mb-2 block text-sm tracking-[0.12em] uppercase text-charcoal-400"
+                    style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
                   >
-                    +91 9744525239
-                    <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                      →
-                    </span>
-                  </a>
+                    Address
+                  </span>
+                  <address className="text-body-lg not-italic text-charcoal">
+                    21, Crimson Way<br />
+                    Hinckley<br />
+                    LE10 2NE
+                  </address>
                 </div>
 
-                {/* Location */}
-                <div className="mb-8">
-                  <span className="text-label mb-2 block text-charcoal-400">Based in</span>
-                  <p className="text-body-lg text-charcoal">India</p>
-                </div>
-
-                {/* Availability */}
-                <div className="mb-12 rounded-lg border border-gold/30 bg-gold/5 p-6">
-                  <div className="mb-2 flex items-center gap-2">
-                    <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-500" />
-                    <span className="text-meta font-medium text-emerald-700">Available for projects</span>
-                  </div>
-                  <p className="text-body-sm text-charcoal-500">
-                    Currently accepting new copywriting and brand storytelling projects.
+                {/* Closing statement */}
+                <div className="rounded-xl border border-gold/30 bg-gold/5 p-6">
+                  <p className="text-body text-charcoal-600 m-0">
+                    If you believe good writing still matters — and should be challenged every day — we&apos;ll get along just fine.
                   </p>
-                </div>
-
-                {/* Social Links */}
-                <div>
-                  <span className="text-label mb-4 block text-charcoal-400">Connect</span>
-                  <div className="flex flex-wrap gap-4">
-                    <a
-                      href="https://linkedin.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-charcoal/20 px-4 py-2 text-body-sm font-medium text-charcoal transition-all hover:border-gold hover:bg-gold/5 hover:text-gold"
-                    >
-                      <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                      </svg>
-                      LinkedIn
-                    </a>
-                    <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border border-charcoal/20 px-4 py-2 text-body-sm font-medium text-charcoal transition-all hover:border-gold hover:bg-gold/5 hover:text-gold"
-                    >
-                      <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                      </svg>
-                      Twitter/X
-                    </a>
-                  </div>
                 </div>
               </div>
 
-              {/* Right Column - Quick Message */}
+              {/* Right Column - Quick Action */}
               <div className="rounded-2xl bg-warm-50 p-8 lg:p-10">
-                <h2 className="text-subhead mb-4">Send a message</h2>
+                <h2 
+                  className="mb-4"
+                  style={{ 
+                    fontFamily: 'var(--font-playfair), Georgia, serif',
+                    fontSize: 'clamp(1.5rem, 2vw, 1.75rem)',
+                    fontWeight: 600
+                  }}
+                >
+                  Start a conversation
+                </h2>
                 <p className="mb-8 text-body text-charcoal-500">
-                  Prefer email? No problem. Click below to open your email client with my 
-                  address pre-filled.
+                  Click below to open your email client with my address pre-filled.
                 </p>
 
                 <a
                   href="mailto:hello@gireeshhariprasad.com?subject=Project%20Inquiry&body=Hi%20Gireesh,%0A%0AI'd%20like%20to%20discuss%20a%20project%20with%20you.%0A%0A"
-                  className="group mb-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-charcoal px-8 py-4 text-body font-medium text-ivory transition-all duration-300 hover:bg-gold hover:shadow-lg"
+                  className="group mb-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-charcoal px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold hover:tracking-[0.15em] hover:shadow-lg"
+                  style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
                 >
-                  Start a conversation
+                  Send an email
                   <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                    →
+                    
                   </span>
                 </a>
 
@@ -138,24 +172,6 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Back to Work CTA */}
-        <section className="border-t border-warm-200 bg-warm-50 py-12">
-          <div className="container-padding mx-auto max-w-content-lg text-center">
-            <p className="mb-4 text-body text-charcoal-500">
-              Want to see what I&apos;ve been working on?
-            </p>
-            <Link
-              href="/work"
-              className="group inline-flex items-center gap-2 text-body font-medium text-charcoal transition-colors hover:text-gold"
-            >
-              View my portfolio
-              <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
           </div>
         </section>
       </main>
