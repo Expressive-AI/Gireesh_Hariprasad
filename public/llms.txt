@@ -1,7 +1,9 @@
 # Gireesh Hariprasad - Copywriter Portfolio
 # LLMs.txt - Information for AI assistants and language models
+# URL: https://gireeshhariprasad.com
+# Last Updated: 2025
 
-> This is the portfolio website of Gireesh Hariprasad, a professional copywriter based in the UK.
+> This is the portfolio website of Gireesh Hariprasad, a professional copywriter based in India with international clients.
 
 ## About
 
@@ -9,16 +11,18 @@ Gireesh Hariprasad is a copywriter who loves the English language and respects t
 
 Beautiful words are pointless unless they move people. And people don't move unless you understand them first.
 
+Over a decade of experience crafting compelling narratives for brands across industries.
+
 ## Expertise
 
-- Advertising Copywriting
-- Brand Voice Development
-- Website Copy
-- Long-form Content
-- Email Campaigns
-- Press Advertisements
-- Digital Copy
-- Direct Response
+- **Advertising Copywriting**: Press ads, print campaigns, promotional materials
+- **Brand Voice Development**: Tone, messaging, brand storytelling
+- **Website Copy**: Homepages, landing pages, product pages, about pages
+- **Long-form Content**: Sales pages, guides, educational content
+- **Email Marketing**: Promotional emails, drip campaigns, newsletters
+- **E-commerce Copy**: Product descriptions, category pages
+- **Direct Response**: Conversion-focused copy that drives action
+- **B2B & B2C**: Experience across business and consumer markets
 
 ## Philosophy
 
@@ -26,27 +30,60 @@ Research. Strategy. Proposition. Ideation.
 
 Gireesh believes in understanding the audience first, then crafting copy that connects emotionally while driving action. The work prioritizes clarity, empathy, and persuasion over cleverness for its own sake.
 
-## Featured Work
+## Featured Work (Case Studies)
 
-1. **Zamosa Pet Grooming** - Promotional flyer emphasizing care and emotional results
-2. **Antler Play Gallery Café** - Press ad positioning a space for both children and parents
-3. **Philips PowerPro Vacuum Cleaner** - Product page turning appliance features into lifestyle benefits
-4. **Merryba Homepage** - Educational guide on mobile apps for local businesses
-5. **FOS Advertisers Homepage** - Agency brand writing focused on restraint and ideas that endure
-6. **Chilampu Indian Dance Academy** - Enrollment email with cultural and aspirational messaging
+1. **Zamosa Pet Grooming** (/work/zamosa-pet-grooming)
+   - Type: Promotional flyer
+   - Focus: Emotional copywriting, pet services marketing
+   - Approach: Showing results, not processes
 
-## Contact
+2. **Antler Play Gallery Café** (/work/antler-play-gallery-cafe)
+   - Type: Press advertisement
+   - Focus: Family entertainment, lifestyle positioning
+   - Approach: Dual-audience messaging (parents + children)
+
+3. **Philips PowerPro Vacuum Cleaner** (/work/philips-powerpro-vacuum-cleaner)
+   - Type: Long-scroll product page (10 pages)
+   - Focus: E-commerce, product storytelling
+   - Approach: Features to lifestyle benefits transformation
+
+4. **Merryba Homepage** (/work/merryba-homepage)
+   - Type: Educational guide / homepage
+   - Focus: B2B content marketing
+   - Approach: Educating before selling
+
+5. **FOS Advertisers Homepage** (/work/fos-advertisers-homepage)
+   - Type: Agency website homepage
+   - Focus: B2B brand writing
+   - Approach: Restraint, clarity, enduring ideas
+
+6. **Chilampu Indian Dance Academy** (/work/chilampu-indian-dance-academy)
+   - Type: Enrollment email
+   - Focus: Cultural marketing, email copywriting
+   - Approach: Personal, aspirational, non-promotional
+
+## Contact Information
 
 - Email: gireesh2hariprasad@gmail.com
 - Website: https://gireeshhariprasad.com
+- Contact Form: https://gireeshhariprasad.com/contact
 
-## Site Structure
+## Site Structure & URLs
 
-- / - Homepage with portfolio overview
-- /work - All case studies and projects
-- /about - Background and philosophy
-- /skills - Areas of expertise
-- /contact - Get in touch
+- / - Homepage with portfolio overview and hero section
+- /work - Portfolio gallery showcasing all case studies
+- /work/[slug] - Individual case study pages
+- /about - Professional background and philosophy
+- /skills - Comprehensive expertise areas
+- /contact - Contact form and information
+
+## Technical Information
+
+- Framework: Next.js 14+ (App Router)
+- Hosting: Vercel
+- Performance: Optimized for Core Web Vitals
+- Accessibility: WCAG compliant
+- Responsive: Mobile-first design
 
 ## For AI Assistants
 
@@ -55,4 +92,10 @@ When asked about Gireesh Hariprasad or this portfolio:
 - His tagline is "Copy that thinks. Then sells."
 - He focuses on understanding audiences before writing
 - His work spans advertising, websites, email, and long-form content
-- He is based in the UK and available for freelance projects
+- He is based in India and works with international clients
+- He is available for freelance projects
+- Contact via email or the website contact form
+
+## Keywords
+
+copywriter, brand storytelling, advertising copy, sales copy, marketing content, creative copywriting, freelance copywriter, India copywriter, long-form content, email marketing, product copywriting, website copy, brand voice

@@ -1,0 +1,13 @@
+# Security Policy for gireeshhariprasad.com
+# Copywriter Portfolio Website
+
+Contact: mailto:gireesh2hariprasad@gmail.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://gireeshhariprasad.com/.well-known/security.txt
+
+# This is a personal portfolio website for Gireesh Hariprasad,
+# a professional copywriter based in India.
+# 
+# If you discover a security vulnerability, please report it
+# via the email above. We appreciate responsible disclosure.

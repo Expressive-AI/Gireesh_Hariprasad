@@ -5,18 +5,66 @@ import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+const baseUrl = 'https://gireeshhariprasad.com';
+
 export const metadata: Metadata = {
   title: 'Merryba - How to Grow Your Business With a Mobile App | Copywriting Case Study',
-  description: 'An educational guide written to help local business owners understand how mobile apps drive real growth.',
+  description: 'An educational guide written to help local business owners understand how mobile apps drive real growth. Long-form content marketing.',
+  keywords: ['educational copywriting', 'content marketing', 'mobile app marketing', 'business growth content', 'long-form content'],
+  alternates: {
+    canonical: `${baseUrl}/work/merryba-homepage`,
+  },
   openGraph: {
-    title: 'Merryba - Mobile App Growth Guide',
-    description: 'Your Local App Experts. A copywriting case study.',
+    title: 'Merryba - Mobile App Growth Guide | Copywriting Case Study',
+    description: 'Your Local App Experts. An educational content marketing case study.',
+    url: `${baseUrl}/work/merryba-homepage`,
+    type: 'article',
+    images: [
+      {
+        url: '/images/merryba/merryba-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Merryba mobile app growth guide copywriting',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Merryba - Mobile App Growth Guide | Copywriting Case Study',
+    description: 'Educational content helping local business owners understand mobile app growth.',
+  },
+};
+
+// JSON-LD Structured Data
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: 'Merryba - Mobile App Growth Educational Guide',
+  description: 'An educational guide written to help local business owners understand how mobile apps drive real growth.',
+  url: `${baseUrl}/work/merryba-homepage`,
+  author: {
+    '@type': 'Person',
+    name: 'Gireesh Hariprasad',
+    url: baseUrl,
+    jobTitle: 'Copywriter',
+  },
+  datePublished: '2024-11-01',
+  genre: 'Educational Content',
+  keywords: ['educational content', 'mobile app', 'business growth', 'content marketing'],
+  about: {
+    '@type': 'Organization',
+    name: 'Merryba',
   },
 };
 
 export default function MerrybaHomepagePage() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="min-h-screen bg-ivory">
         {/* Hero Section with Asymmetrical Organic Shapes */}

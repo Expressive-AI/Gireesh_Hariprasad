@@ -12,18 +12,70 @@ import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+const baseUrl = 'https://gireeshhariprasad.com';
+
 export const metadata: Metadata = {
   title: 'Philips PowerPro Vacuum Cleaner | Copywriting Case Study',
-  description: 'A long-scroll product page written to turn a functional appliance into a lifestyle upgrade.',
+  description: 'A long-scroll product page written to turn a functional appliance into a lifestyle upgrade. 10-page sales copy showcase.',
+  keywords: ['product page copywriting', 'long-form sales copy', 'appliance marketing', 'Philips copywriting', 'e-commerce copy'],
+  alternates: {
+    canonical: `${baseUrl}/work/philips-powerpro-vacuum-cleaner`,
+  },
   openGraph: {
-    title: 'Philips PowerPro Bagless 1900W',
-    description: 'Dust-free rooms that give you a healthier life.',
+    title: 'Philips PowerPro Vacuum Cleaner | Copywriting Case Study',
+    description: 'Dust-free rooms that give you a healthier life. A 10-page long-scroll product copywriting case study.',
+    url: `${baseUrl}/work/philips-powerpro-vacuum-cleaner`,
+    type: 'article',
+    images: [
+      {
+        url: '/images/philips/philips-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Philips PowerPro Vacuum Cleaner product page copywriting',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Philips PowerPro Vacuum Cleaner | Copywriting Case Study',
+    description: 'Long-form product copy that transforms appliances into lifestyle upgrades.',
+  },
+};
+
+// JSON-LD Structured Data
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: 'Philips PowerPro Vacuum Cleaner - Product Page Copy',
+  description: 'A 10-page long-scroll product page written to turn a functional appliance into a lifestyle upgrade.',
+  url: `${baseUrl}/work/philips-powerpro-vacuum-cleaner`,
+  author: {
+    '@type': 'Person',
+    name: 'Gireesh Hariprasad',
+    url: baseUrl,
+    jobTitle: 'Copywriter',
+  },
+  datePublished: '2025-02-01',
+  genre: 'Product Copy',
+  keywords: ['product page', 'long-form copy', 'sales copy', 'e-commerce', 'Philips'],
+  about: {
+    '@type': 'Product',
+    name: 'Philips PowerPro Bagless 1900W Vacuum Cleaner',
+    brand: {
+      '@type': 'Brand',
+      name: 'Philips',
+    },
   },
 };
 
 export default function PhilipsPage() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="min-h-screen bg-ivory">
         {/* Hero Section */}

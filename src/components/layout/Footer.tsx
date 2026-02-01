@@ -147,10 +147,10 @@ export default function Footer() {
                   Email
                 </span>
                 <a
-                  href="mailto:hello@gireeshhariprasad.com"
+                  href="mailto:copywriter.gireesh@gmail.com"
                   className="text-body text-charcoal hover:text-gold transition-colors"
                 >
-                  gireesh2hariprasad@gmail.com
+                  copywriter.gireesh@gmail.com
                 </a>
               </div>
 

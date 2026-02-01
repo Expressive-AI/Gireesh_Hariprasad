@@ -12,18 +12,66 @@ import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+const baseUrl = 'https://gireeshhariprasad.com';
+
 export const metadata: Metadata = {
   title: 'Chilampu Indian Dance Academy | Copywriting Case Study',
-  description: 'An enrollment email written to feel personal, cultural, and aspirational rather than promotional.',
+  description: 'An enrollment email written to feel personal, cultural, and aspirational rather than promotional. Email marketing case study.',
+  keywords: ['email copywriting', 'dance academy marketing', 'cultural marketing', 'enrollment email', 'Bharatanatyam'],
+  alternates: {
+    canonical: `${baseUrl}/work/chilampu-indian-dance-academy`,
+  },
   openGraph: {
-    title: 'Chilampu Indian Dance Academy',
-    description: 'Let them dance. Let them shine.',
+    title: 'Chilampu Indian Dance Academy | Copywriting Case Study',
+    description: 'Let them dance. Let them shine. An enrollment email copywriting case study.',
+    url: `${baseUrl}/work/chilampu-indian-dance-academy`,
+    type: 'article',
+    images: [
+      {
+        url: '/images/chilampu/chilampu-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Chilampu Indian Dance Academy email copywriting',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Chilampu Indian Dance Academy | Copywriting Case Study',
+    description: 'Email copy that feels personal, cultural, and aspirational.',
+  },
+};
+
+// JSON-LD Structured Data
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: 'Chilampu Indian Dance Academy - Enrollment Email',
+  description: 'An enrollment email written to feel personal, cultural, and aspirational rather than promotional.',
+  url: `${baseUrl}/work/chilampu-indian-dance-academy`,
+  author: {
+    '@type': 'Person',
+    name: 'Gireesh Hariprasad',
+    url: baseUrl,
+    jobTitle: 'Copywriter',
+  },
+  datePublished: '2025-01-20',
+  genre: 'Email Marketing',
+  keywords: ['email copy', 'dance academy', 'enrollment', 'cultural marketing', 'Bharatanatyam'],
+  about: {
+    '@type': 'Organization',
+    name: 'Chilampu Indian Dance Academy',
   },
 };
 
 export default function ChilampuPage() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="min-h-screen bg-ivory">
         {/* Hero Section with Asymmetrical Organic Shapes */}

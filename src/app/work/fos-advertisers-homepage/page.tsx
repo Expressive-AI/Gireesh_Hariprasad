@@ -12,18 +12,66 @@ import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+const baseUrl = 'https://gireeshhariprasad.com';
+
 export const metadata: Metadata = {
   title: 'FOS Advertisers Homepage | Copywriting Case Study',
-  description: 'Homepage brand writing focused on restraint, clarity, and ideas that endure.',
+  description: 'Homepage brand writing focused on restraint, clarity, and ideas that endure. Website copywriting case study.',
+  keywords: ['homepage copywriting', 'brand writing', 'advertising agency copy', 'website copy', 'B2B copywriting'],
+  alternates: {
+    canonical: `${baseUrl}/work/fos-advertisers-homepage`,
+  },
   openGraph: {
-    title: 'FOS Advertisers',
-    description: 'Ideas that stay. Stories that sell.',
+    title: 'FOS Advertisers Homepage | Copywriting Case Study',
+    description: 'Ideas that stay. Stories that sell. A homepage brand copywriting case study.',
+    url: `${baseUrl}/work/fos-advertisers-homepage`,
+    type: 'article',
+    images: [
+      {
+        url: '/images/fos-advert/fos-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'FOS Advertisers homepage copywriting',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FOS Advertisers Homepage | Copywriting Case Study',
+    description: 'Brand writing focused on restraint, clarity, and enduring ideas.',
+  },
+};
+
+// JSON-LD Structured Data
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: 'FOS Advertisers - Homepage Brand Writing',
+  description: 'Homepage brand writing focused on restraint, clarity, and ideas that endure.',
+  url: `${baseUrl}/work/fos-advertisers-homepage`,
+  author: {
+    '@type': 'Person',
+    name: 'Gireesh Hariprasad',
+    url: baseUrl,
+    jobTitle: 'Copywriter',
+  },
+  datePublished: '2024-12-10',
+  genre: 'Website Copy',
+  keywords: ['homepage copy', 'brand writing', 'advertising agency', 'website content'],
+  about: {
+    '@type': 'Organization',
+    name: 'FOS Advertisers',
   },
 };
 
 export default function FOSPage() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="min-h-screen bg-ivory">
         {/* Hero Section */}

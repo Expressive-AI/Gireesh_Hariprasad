@@ -1,7 +1,48 @@
+import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
 import HeroHeadline from '@/components/ui/HeroHeadline';
+
+export const metadata: Metadata = {
+  title: 'Gireesh Hariprasad | Copywriter & Brand Storyteller',
+  description: 'Professional copywriter crafting compelling brand narratives, sales copy, and marketing content. Over a decade of experience turning ideas into conversions.',
+  keywords: [
+    'copywriter',
+    'brand storytelling',
+    'sales copy',
+    'marketing content',
+    'advertising copywriter',
+    'creative copywriting',
+    'India copywriter',
+    'freelance copywriter',
+  ],
+  alternates: {
+    canonical: 'https://gireeshhariprasad.com',
+  },
+  openGraph: {
+    title: 'Gireesh Hariprasad | Copywriter & Brand Storyteller',
+    description: 'Professional copywriter crafting compelling brand narratives, sales copy, and marketing content that converts.',
+    url: 'https://gireeshhariprasad.com',
+    siteName: 'Gireesh Hariprasad',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Gireesh Hariprasad - Copywriter Portfolio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Gireesh Hariprasad | Copywriter & Brand Storyteller',
+    description: 'Professional copywriter crafting compelling brand narratives, sales copy, and marketing content.',
+    images: ['/images/og-image.jpg'],
+  },
+};
 
 export default function Home() {
   return (

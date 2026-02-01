@@ -12,18 +12,66 @@ import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+const baseUrl = 'https://gireeshhariprasad.com';
+
 export const metadata: Metadata = {
   title: 'Zamosa Pet Grooming | Copywriting Case Study',
   description: 'A promotional flyer written to attract pet lovers by showing care, calmness, and the emotional result of grooming — not the act itself.',
+  keywords: ['pet grooming copywriting', 'promotional flyer', 'pet services marketing', 'emotional copywriting'],
+  alternates: {
+    canonical: `${baseUrl}/work/zamosa-pet-grooming`,
+  },
   openGraph: {
-    title: 'Zamosa Pet Grooming',
-    description: 'Treatments that make your dog more lovely. A copywriting case study.',
+    title: 'Zamosa Pet Grooming | Copywriting Case Study',
+    description: 'Treatments that make your dog more lovely. A copywriting case study showcasing emotional brand messaging.',
+    url: `${baseUrl}/work/zamosa-pet-grooming`,
+    type: 'article',
+    images: [
+      {
+        url: '/images/zamosa/zamosa-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zamosa Pet Grooming promotional flyer copywriting',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Zamosa Pet Grooming | Copywriting Case Study',
+    description: 'A promotional flyer written with care, calmness, and emotional resonance.',
+  },
+};
+
+// JSON-LD Structured Data for this case study
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: 'Zamosa Pet Grooming - Promotional Flyer Copywriting',
+  description: 'A promotional flyer written to attract pet lovers by showing care, calmness, and the emotional result of grooming.',
+  url: `${baseUrl}/work/zamosa-pet-grooming`,
+  author: {
+    '@type': 'Person',
+    name: 'Gireesh Hariprasad',
+    url: baseUrl,
+    jobTitle: 'Copywriter',
+  },
+  datePublished: '2025-05-01',
+  genre: 'Advertising Copy',
+  keywords: ['promotional flyer', 'pet grooming', 'copywriting', 'brand messaging'],
+  about: {
+    '@type': 'Organization',
+    name: 'Zamosa Pet Grooming',
   },
 };
 
 export default function ZamosaPetGroomingPage() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="min-h-screen bg-ivory">
         {/* Hero Section with Asymmetrical Organic Shapes */}

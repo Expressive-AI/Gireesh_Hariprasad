@@ -176,10 +176,10 @@ export default function ContactPage() {
                     Email
                   </span>
                   <a
-                    href="mailto:gireesh2hariprasad@gmail.com"
+                    href="mailto:copywriter.gireesh@gmail.com"
                     className="group inline-flex items-center gap-2 text-body-lg font-medium text-charcoal transition-colors hover:text-gold"
                   >
-                    gireesh2hariprasad@gmail.com
+                    copywriter.gireesh@gmail.com
                     <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
                       
                     </span>
@@ -256,8 +256,8 @@ export default function ContactPage() {
                       </svg>
                       <p className="text-sm text-red-800">
                         Failed to send message. Please try emailing me directly at{' '}
-                        <a href="mailto:gireesh2hariprasad@gmail.com" className="underline hover:no-underline">
-                          gireesh2hariprasad@gmail.com
+                        <a href="mailto:copywriter.gireesh@gmail.com" className="underline hover:no-underline">
+                          copywriter.gireesh@gmail.com
                         </a>
                       </p>
                     </div>

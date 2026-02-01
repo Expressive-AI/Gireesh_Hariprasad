@@ -12,18 +12,66 @@ import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
+const baseUrl = 'https://gireeshhariprasad.com';
+
 export const metadata: Metadata = {
   title: 'Antler Play Gallery Café | Copywriting Case Study',
   description: 'A press advertisement written to position a play café as a shared space for children and parents.',
+  keywords: ['press advertisement', 'play café copywriting', 'family entertainment marketing', 'lifestyle copywriting'],
+  alternates: {
+    canonical: `${baseUrl}/work/antler-play-gallery-cafe`,
+  },
   openGraph: {
-    title: 'Antler Play Gallery Café',
-    description: 'Quality time for your children. Wonderful moments for you.',
+    title: 'Antler Play Gallery Café | Copywriting Case Study',
+    description: 'Quality time for your children. Wonderful moments for you. A press ad copywriting case study.',
+    url: `${baseUrl}/work/antler-play-gallery-cafe`,
+    type: 'article',
+    images: [
+      {
+        url: '/images/antler/antler-hero.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Antler Play Gallery Café press advertisement copywriting',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Antler Play Gallery Café | Copywriting Case Study',
+    description: 'A press advertisement positioning a play café for families.',
+  },
+};
+
+// JSON-LD Structured Data
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CreativeWork',
+  name: 'Antler Play Gallery Café - Press Advertisement',
+  description: 'A press advertisement written to position a play café as a shared space for children and parents.',
+  url: `${baseUrl}/work/antler-play-gallery-cafe`,
+  author: {
+    '@type': 'Person',
+    name: 'Gireesh Hariprasad',
+    url: baseUrl,
+    jobTitle: 'Copywriter',
+  },
+  datePublished: '2025-03-15',
+  genre: 'Press Advertisement',
+  keywords: ['press ad', 'play café', 'family entertainment', 'lifestyle copywriting'],
+  about: {
+    '@type': 'Organization',
+    name: 'Antler Play Gallery Café',
   },
 };
 
 export default function AntlerPage() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header />
       <main className="min-h-screen bg-ivory">
         {/* Hero Section */}
