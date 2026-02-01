@@ -228,10 +228,16 @@ export default function AntlerPage() {
                 <p className="text-base text-charcoal-700 font-medium leading-snug italic">Stay for the coffee, the laughs and the break you deserve.</p>
               </div>
 
-              {/* Logo Placeholder */}
+              {/* Logo */}
               <div className="text-center pt-6 border-t border-warm-200">
-                <div className="inline-flex items-center justify-center w-48 h-16 border-2 border-dashed border-charcoal-300 rounded-lg bg-warm-50">
-                  <span className="text-sm text-charcoal-400 font-medium">Logo Placeholder</span>
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full overflow-hidden shadow-md border-2 border-warm-200">
+                  <Image
+                    src="/images/antler/antler-logo.png"
+                    alt="Antlers Play Gallery Café Logo"
+                    width={64}
+                    height={64}
+                    className="object-cover"
+                  />
                 </div>
                 <p className="text-sm text-charcoal-500 mt-2">Antlers Play Gallery Café</p>
               </div>
