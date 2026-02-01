@@ -117,106 +117,387 @@ export default function PhilipsPage() {
           </div>
         </section>
 
-        {/* Key Message Banner */}
-        <section className="relative py-16 lg:py-20 bg-charcoal text-ivory overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
-              backgroundSize: '40px 40px'
-            }} />
-          </div>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <span className="text-label tracking-widest text-gold mb-6 block">THE PROMISE</span>
-            <p className="text-2xl lg:text-3xl font-light leading-relaxed max-w-3xl mx-auto">
-              Turn every space into a fresh, happy place.<br />
-              <span className="text-gold">Not a speck of dust. No sneezing either.</span>
-            </p>
-          </div>
-        </section>
+        {/* 10-Page Longform Sales Website - Dense, Editorial Copy */}
+        <section className="bg-ivory">
+          <div className="container-padding mx-auto max-w-prose">
+            <article className="py-8 lg:py-12">
+              
+              {/* Page 1: Hero Copy */}
+              <div className="mb-8 pb-8 border-b border-warm-200">
+                <h2 className="text-2xl lg:text-3xl font-bold text-charcoal leading-tight mb-2">
+                  Dust-free Rooms That Give You A Healthier Life
+                </h2>
+                <p className="text-base text-charcoal-600 mb-4">
+                  Grab the Philips PowerPro Bagless 1900W Vacuum Cleaner – FC9571/01
+                </p>
+                <p className="text-xl lg:text-2xl font-semibold text-gold mb-4">
+                  Turn Every Space into A Fresh, Happy Place
+                </p>
+                <p className="text-base text-charcoal-600 leading-snug mb-2">
+                  Imagine entering a room that feels clean and most welcoming. Not a speck of dust and dirt. No sneezing either.
+                </p>
+                <p className="text-base text-charcoal-600 leading-snug">
+                  Enjoy this reality with Philips PowerPro Bagless Vacuum Cleaner. It sucks even the most deep-set dust and dirt in one easy move, leaving your room truly tidy. An amazing way to a better life.
+                </p>
+              </div>
 
-        {/* Image Gallery */}
-        <section className="py-16 lg:py-24 bg-ivory">
-          <div className="container-padding mx-auto max-w-content-lg">
-            <div className="relative grid grid-cols-12 gap-4 lg:gap-6">
-              {/* Image 1 */}
-              <div className="col-span-6 relative rotate-1 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
+              {/* Page 2: Power */}
+              <div className="mb-8 pb-8 border-b border-warm-200">
+                <h2 className="text-xl lg:text-2xl font-bold text-charcoal leading-tight mb-3">
+                  1900W of Powerful Cleaning Strength
+                </h2>
+                
+                {/* Power Section Images */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 my-4">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                    <Image
+                      src="/images/philips/image-8.jpg"
+                      alt="Philips PowerPro 1900W motor delivering powerful suction"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                    <Image
+                      src="/images/philips/image-7.webp"
+                      alt="Deep cleaning capability on carpets and floors"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                
+                <p className="text-lg text-gold font-medium mb-3">No Matter Where</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  What beats inside this machine is a 1900W high-performance motor. It easily sucks dust from corners, carpets and cushions.
+                </p>
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1 mb-3">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Built to perform deep cleaning
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Quick performance, saving time and effort
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Leaves no dust behind
+                  </li>
+                </ul>
+                <p className="text-base text-charcoal-700 font-medium italic">
+                  A Powerful Vacuum That Gives You Greater Cleaning Confidence
+                </p>
+              </div>
+
+              {/* Page 3: Control */}
+              <div className="mb-8 pb-8 border-b border-warm-200">
+                <h2 className="text-xl lg:text-2xl font-bold text-charcoal leading-tight mb-2">
+                  Adjust The Control
+                </h2>
+                <p className="text-lg text-gold font-medium mb-3">Do The Cleaning Your Own Way</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  A vacuum with easy-to-adjust suction power that works according to different cleaning tasks.
+                </p>
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1 mb-3">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Low power for delicate fabrics
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    High power for stubborn dirt
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Absolute control at your fingertips
+                  </li>
+                </ul>
+                
+                {/* Control Section Image - Compact */}
+                <div className="max-w-xs my-4">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                    <Image
+                      src="/images/philips/image-2.webp"
+                      alt="Easy-to-adjust suction control for different cleaning tasks"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                
+                <p className="text-base text-charcoal-700 font-medium italic">
+                  It&apos;s Smart Cleaning with Smart Control
+                </p>
+              </div>
+
+              {/* Compact Image Strip */}
+              <div className="flex gap-3 my-8 overflow-hidden">
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                   <Image
                     src="/images/philips/philips-2.jpg"
-                    alt="Clean modern living room"
+                    alt="Philips PowerPro Vacuum"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
                   />
                 </div>
-              </div>
-              
-              {/* Image 2 */}
-              <div className="col-span-6 relative mt-12 -rotate-1 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                   <Image
-                    src="/images/philips/philips-3.jpg"
-                    alt="Effortless cleaning experience"
+                    src="/images/philips/image-6.webp"
+                    alt="Clean living room"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md hidden sm:block">
+                  <Image
+                    src="/images/philips/image-1.webp"
+                    alt="Effortless cleaning"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               </div>
-              
-              {/* Decorative */}
-              <div className="absolute -right-4 top-1/4 w-16 h-16 border-2 border-gold/20 rounded-full" />
-            </div>
-          </div>
-        </section>
 
-        {/* Key Features Section */}
-        <section className="py-16 lg:py-24 bg-warm-50">
-          <div className="container-padding mx-auto max-w-content">
-            <div className="mx-auto max-w-prose-wide">
-              <span className="text-label tracking-widest text-gold mb-4 block">THE COPY</span>
-              <h2 className="text-title mb-8 text-charcoal">Features, translated to feelings</h2>
-              
-              <div className="space-y-6">
-                {[
-                  { power: '1900W Motor', benefit: 'Deep cleaning confidence from corners to carpets' },
-                  { power: 'Adjustable Suction', benefit: 'Smart control for delicate fabrics and stubborn dirt' },
-                  { power: 'Washable Filter', benefit: 'Cost-effective, eco-friendly, lasting freshness' },
-                  { power: 'Rubber Wheels', benefit: 'Zero strain movement, no floor scratches' },
-                  { power: '2-Year Warranty', benefit: 'Peace of mind, guaranteed' },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-4 p-5 bg-ivory rounded-xl border-l-4 border-gold">
-                    <div>
-                      <span className="text-sm font-medium text-gold block mb-1">{item.power}</span>
-                      <p className="text-charcoal-600">{item.benefit}</p>
-                    </div>
+              {/* Page 4: Dust-free */}
+              <div className="mb-8 pb-8 border-b border-warm-200">
+                <h2 className="text-xl lg:text-2xl font-bold text-charcoal leading-tight mb-2">
+                  Live In A Dust-free World
+                </h2>
+                <p className="text-lg text-gold font-medium mb-3">Breathe Easy with No Dust Allergy</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  Dust drives you crazy sometimes. Philips PowerPro removes dust effectively and helps you enjoy cleaner air indoors.
+                </p>
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1 mb-3">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Experience healthier living conditions
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Work in cleaner spaces
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Feel relaxed and refreshed
+                  </li>
+                </ul>
+                
+                {/* Dust-free Section Image - Compact */}
+                <div className="max-w-xs my-4">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                    <Image
+                      src="/images/philips/philips-2.jpg"
+                      alt="Clean, allergen-free living environment"
+                      fill
+                      className="object-cover"
+                    />
                   </div>
-                ))}
+                </div>
+                
+                <p className="text-base text-charcoal-700 font-medium italic">
+                  Enjoy Better Days with Clean Air and Clear Mind
+                </p>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-charcoal text-ivory relative overflow-hidden">
-          <svg
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] text-gold opacity-5"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="currentColor"
-              d="M39.5,-48.3C50.9,-39.6,59.6,-27.3,63.7,-13.2C67.8,0.9,67.3,16.8,61.1,30.1C54.9,43.4,43,54.1,29.1,59.6C15.2,65.1,-0.7,65.4,-16.4,61.5C-32.1,57.6,-47.6,49.5,-57.3,37C-67,24.5,-70.9,7.6,-68.4,-8.2C-65.9,-24,-57,-38.7,-44.7,-47.2C-32.4,-55.7,-16.2,-58,-0.6,-57.3C15,-56.6,28.1,-57,39.5,-48.3Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <p className="text-xl lg:text-2xl font-light mb-4">
-              More than a cleaning tool.
-            </p>
-            <p className="text-2xl lg:text-3xl text-gold font-light">
-              It&apos;s effortless clean living.
-            </p>
+              {/* Page 5: Filter */}
+              <div className="mb-8 pb-8 border-b border-warm-200">
+                <h2 className="text-xl lg:text-2xl font-bold text-charcoal leading-tight mb-2">
+                  No Complicated Replacements
+                </h2>
+                <p className="text-lg text-gold font-medium mb-3">Only Long-Lasting Freshness</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  Philips PowerPro&apos;s washable filter makes maintenance simple and performance better.
+                </p>
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1 mb-3">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Wash and reuse
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Cost-effective and eco-friendly
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Lasting consistency
+                  </li>
+                </ul>
+                <p className="text-base text-charcoal-700 font-medium italic">
+                  Easy care and simple to use
+                </p>
+              </div>
+
+              {/* Page 6: Wheels */}
+              <div className="mb-8 pb-8 border-b border-warm-200">
+                <h2 className="text-xl lg:text-2xl font-bold text-charcoal leading-tight mb-2">
+                  Zero Strain Movement
+                </h2>
+                <p className="text-lg text-gold font-medium mb-3">Rubber Wheels for Smooth Motion</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  Move freely from room to room. The rubber wheels ensure easy glide and leave no marks on the floors.
+                </p>
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1 mb-3">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Effortless control
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    No scratches
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Easy turning
+                  </li>
+                </ul>
+                
+                {/* Wheels Section Image - Compact */}
+                <div className="max-w-xs my-4">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                    <Image
+                      src="/images/philips/image-5.webp"
+                      alt="Effortless mobility with smooth rubber wheels"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                
+                <p className="text-base text-charcoal-700 font-medium italic">
+                  You Feel No Strain. Cleaning Your Room Is A Breeze with Philips PowerPro
+                </p>
+              </div>
+
+              {/* Page 7: Lightweight */}
+              <div className="mb-8 pb-8 border-b border-warm-200">
+                <h2 className="text-xl lg:text-2xl font-bold text-charcoal leading-tight mb-2">
+                  Lightweight for Daily Use
+                </h2>
+                <p className="text-lg text-gold font-medium mb-3">Heavy on Results</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  Philips PowerPro is designed to perform with easy-to-manage weight. You can easily lift, pull and store it.
+                </p>
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1 mb-3">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Perfect for everyday cleaning
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Quick setup and use
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    No back strain
+                  </li>
+                </ul>
+                
+                {/* Lightweight Section Image - Compact */}
+                <div className="max-w-xs my-4">
+                  <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                    <Image
+                      src="/images/philips/philips-3.jpg"
+                      alt="Lightweight design for effortless daily cleaning"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                
+                <p className="text-base text-charcoal-700 font-medium italic">
+                  It&apos;s Simple to Use that Your Daily Life Feels Lighter
+                </p>
+              </div>
+
+              {/* Page 8: Warranty */}
+              <div className="mb-8 pb-8 border-b border-warm-200">
+                <h2 className="text-xl lg:text-2xl font-bold text-charcoal leading-tight mb-2">
+                  2-Year Warranty
+                </h2>
+                <p className="text-lg text-gold font-medium mb-3">Peace of Mind, Guaranteed</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  Philips stands by its quality. This vacuum cleaner comes with a 2-year warranty that protects your purchase and assures reliability.
+                </p>
+                <p className="text-base text-charcoal-700 font-medium italic">
+                  As Always, Philips Exceeds Your Expectations
+                </p>
+              </div>
+
+              {/* Page 9: Offers */}
+              <div className="mb-8 pb-8 border-b border-warm-200 bg-warm-50 -mx-4 px-4 py-6 rounded-lg">
+                <h2 className="text-xl lg:text-2xl font-bold text-charcoal leading-tight mb-2">
+                  Irresistible Offers and Big Savings
+                </h2>
+                <p className="text-lg text-gold font-medium mb-3">Pay In Easy Installments</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  Limited time offers available now:
+                </p>
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Flat 30% OFF on every order
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Extra 5% OFF when you buy 2 or more items
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Easy EMI options – 2/4/6 months
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Pay just Rs. 1490 per month
+                  </li>
+                </ul>
+              </div>
+
+              {/* Page 10: Close */}
+              <div className="text-center">
+                <h2 className="text-xl lg:text-2xl font-bold text-charcoal leading-tight mb-1">
+                  More Than A Cleaning Tool
+                </h2>
+                <p className="text-lg text-gold font-medium mb-4">It&apos;s Effortless Clean Living</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-4">
+                  The Philips PowerPro Bagless 1900W Vacuum Cleaner is a lifestyle upgrade. It simply transforms your space and accords a better and cleaner atmosphere for healthy living.
+                </p>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">Enjoy:</p>
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1 mb-4 inline-block text-left">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Powerful cleaning
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Allergy relief
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Elegant design
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Simple operation
+                  </li>
+                </ul>
+                <p className="text-base text-charcoal-700 font-medium mb-1">
+                  Bring home Philips PowerPro. Make your life more beautiful.
+                </p>
+                <p className="text-base text-charcoal-600 mb-6">
+                  Order it now for a dust-free space.
+                </p>
+                
+                {/* CTA Button */}
+                <a
+                  href="#"
+                  className="inline-block bg-gold text-charcoal font-bold text-lg px-10 py-4 rounded-full hover:bg-gold/90 transition-colors shadow-lg"
+                >
+                  CLICK HERE
+                </a>
+              </div>
+
+            </article>
           </div>
         </section>
 

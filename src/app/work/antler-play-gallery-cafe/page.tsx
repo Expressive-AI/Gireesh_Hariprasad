@@ -132,106 +132,110 @@ export default function AntlerPage() {
           </div>
         </section>
 
-        {/* Key Message Banner */}
-        <section className="relative py-16 lg:py-20 bg-charcoal text-ivory overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
-              backgroundSize: '40px 40px'
-            }} />
-          </div>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <span className="text-label tracking-widest text-gold mb-6 block">THE INSIGHT</span>
-            <p className="text-2xl lg:text-3xl font-light leading-relaxed max-w-3xl mx-auto">
-              Parents don&apos;t just need places for their children to play.<br />
-              <span className="text-gold">They need relief. Conversation. Moments to pause without guilt.</span>
-            </p>
-          </div>
-        </section>
+        {/* Editorial Press Ad Section - Dense, Copy-Driven Layout */}
+        <section className="bg-ivory">
+          <div className="container-padding mx-auto max-w-prose">
+            {/* Press Ad - Editorial Layout */}
+            <article className="py-8 lg:py-12">
+              {/* Headline */}
+              <div className="text-center mb-6">
+                <h2 className="text-3xl lg:text-4xl font-bold text-charcoal uppercase tracking-tight leading-tight mb-1">
+                  Let your kids play their hearts out
+                </h2>
+                <p className="text-2xl lg:text-3xl font-bold text-gold uppercase tracking-tight leading-tight">
+                  While you catch up with yours
+                </p>
+              </div>
 
-        {/* Loose Image Gallery */}
-        <section className="py-16 lg:py-24 bg-ivory">
-          <div className="container-padding mx-auto max-w-content-lg">
-            <div className="relative grid grid-cols-12 gap-4 lg:gap-6">
-              {/* Image 1 - Large */}
-              <div className="col-span-7 relative -rotate-1 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl">
+              {/* Brand Name & Tagline */}
+              <div className="text-center mb-6 pb-6 border-b border-warm-200">
+                <p className="text-xl lg:text-2xl font-semibold text-charcoal tracking-wide uppercase">
+                  Antler Play Gallery Café
+                </p>
+                <p className="text-base text-charcoal-600 italic mt-1">
+                  Quality time for your children. Wonderful moments for you.
+                </p>
+              </div>
+
+              {/* Main Copy */}
+              <div className="mb-6">
+                <p className="text-base text-charcoal-600 leading-snug">
+                  Step into Antlers with your kids – A special world made for them with curated space for indoor games and a high-quality café environment for you and caregivers.
+                </p>
+              </div>
+
+              {/* Compact Image Strip */}
+              <div className="flex gap-3 my-6 overflow-hidden">
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                  <Image
+                    src="/images/antler/antler-1.jpg"
+                    alt="Children playing at Antler"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                   <Image
                     src="/images/antler/antler-2.jpg"
-                    alt="Cozy café environment for parents"
+                    alt="Cozy café environment"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
                   />
                 </div>
-              </div>
-              
-              {/* Image 2 - Medium, offset */}
-              <div className="col-span-5 col-start-8 relative mt-20 rotate-2 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lg">
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md hidden sm:block">
                   <Image
                     src="/images/antler/antler-3.jpg"
-                    alt="Children engaged in creative play"
+                    alt="Creative play activities"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
                   />
                 </div>
               </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -left-4 top-1/4 w-14 h-14 border-2 border-gold/30 rounded-full" />
-              <div className="absolute right-1/3 bottom-4 w-20 h-20 border border-warm-300 rounded-full" />
-            </div>
-          </div>
-        </section>
 
-        {/* Features Section */}
-        <section className="py-16 lg:py-24 bg-warm-50">
-          <div className="container-padding mx-auto max-w-content">
-            <div className="mx-auto max-w-prose-wide">
-              <span className="text-label tracking-widest text-gold mb-4 block">THE COPY</span>
-              <h2 className="text-title mb-8 text-charcoal">A special world made for them</h2>
-              
-              <div className="grid sm:grid-cols-2 gap-4">
-                {[
-                  'Dedicated zones for children',
-                  'Coffee bar with drinks, snacks & light meals',
-                  'FREE Wi-Fi',
-                  'Bookings for events & parties',
-                  'Storytime, art lessons & music sessions',
-                  'Secure check-in systems',
-                ].map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3 p-4 bg-ivory rounded-lg">
-                    <span className="flex-shrink-0 w-2 h-2 rounded-full bg-gold" />
-                    <span className="text-charcoal-600">{feature}</span>
-                  </div>
-                ))}
+              {/* Features - Inline Style */}
+              <div className="mb-6">
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Dedicated zones for children
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Coffee bar serving drinks, snacks and light meals
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    FREE Wi-Fi
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Bookings for Events &amp; parties
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Storytime, art lessons, and music sessions for children
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Secure check-in systems to keep children safe
+                  </li>
+                </ul>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-charcoal text-ivory relative overflow-hidden">
-          <svg
-            className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] text-gold opacity-5"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="currentColor"
-              d="M42.8,-52.4C55.9,-45.1,67,-32.4,71.8,-17.5C76.6,-2.6,75.1,14.5,68,28.5C60.9,42.5,48.2,53.4,33.9,59.8C19.6,66.2,3.7,68.1,-11.8,65.6C-27.3,63.1,-42.4,56.2,-53.5,45C-64.6,33.8,-71.7,18.3,-73.1,2.1C-74.5,-14.1,-70.2,-30.9,-60.1,-43.5C-50,-56.1,-34.1,-64.5,-18.4,-67.1C-2.7,-69.7,12.8,-66.5,26.9,-60.5C41,-54.5,53.7,-45.7,42.8,-52.4Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <p className="text-xl lg:text-2xl font-light mb-4 text-ivory/80">
-              Come with your little ones.
-            </p>
-            <p className="text-lg text-gold italic">
-              Stay for the coffee, the laughs, and the break you deserve.
-            </p>
+              {/* Closing CTA */}
+              <div className="border-l-3 border-gold pl-4 mb-6">
+                <p className="text-base text-charcoal-600 leading-snug mb-1">Come with your little ones.</p>
+                <p className="text-base text-charcoal-700 font-medium leading-snug italic">Stay for the coffee, the laughs and the break you deserve.</p>
+              </div>
+
+              {/* Logo Placeholder */}
+              <div className="text-center pt-6 border-t border-warm-200">
+                <div className="inline-flex items-center justify-center w-48 h-16 border-2 border-dashed border-charcoal-300 rounded-lg bg-warm-50">
+                  <span className="text-sm text-charcoal-400 font-medium">Logo Placeholder</span>
+                </div>
+                <p className="text-sm text-charcoal-500 mt-2">Antlers Play Gallery Café</p>
+              </div>
+            </article>
           </div>
         </section>
 

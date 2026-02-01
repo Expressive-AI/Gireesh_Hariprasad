@@ -117,104 +117,139 @@ export default function FOSPage() {
           </div>
         </section>
 
-        {/* Key Message Banner */}
-        <section className="relative py-16 lg:py-20 bg-charcoal text-ivory overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
-              backgroundSize: '40px 40px'
-            }} />
-          </div>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <span className="text-label tracking-widest text-gold mb-6 block">THE PHILOSOPHY</span>
-            <p className="text-2xl lg:text-3xl font-light leading-relaxed max-w-3xl mx-auto">
-              We are not loud for the sake of noise.<br />
-              <span className="text-gold">We create communication that connects, converts, and lasts.</span>
-            </p>
-          </div>
-        </section>
+        {/* Website Home Page Copy Showcase - Dense, Editorial Layout */}
+        <section className="bg-ivory">
+          <div className="container-padding mx-auto max-w-prose">
+            <article className="py-8 lg:py-12">
+              
+              {/* Project Header */}
+              <div className="mb-6 pb-4 border-b border-warm-200">
+                <p className="text-lg font-semibold text-charcoal">FOS Advertisers</p>
+                <p className="text-sm text-gold font-medium">Website Home Page</p>
+              </div>
 
-        {/* Loose Image Gallery */}
-        <section className="py-16 lg:py-24 bg-ivory">
-          <div className="container-padding mx-auto max-w-content-lg">
-            <div className="relative grid grid-cols-12 gap-4 lg:gap-6">
-              {/* Image 1 */}
-              <div className="col-span-6 relative -rotate-1 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
+              {/* Brand Name & Tagline */}
+              <div className="mb-6">
+                <h2 className="text-2xl lg:text-3xl font-bold text-charcoal uppercase tracking-tight mb-2">
+                  FOS Advertisers
+                </h2>
+                <p className="text-xl lg:text-2xl text-gold font-medium italic">
+                  Ideas that stay. Stories that sell.
+                </p>
+              </div>
+
+              {/* Introduction */}
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-charcoal mb-2">Advertising, Done with Intent</h3>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  Based in Thiruvananthapuram, FOS Advertisers has been shaping brands, building recall, and driving results since 2005. We&apos;re not loud for the sake of noise. We create communication that connects, converts, and lasts.
+                </p>
+                <p className="text-base text-charcoal-600 leading-snug">
+                  From digital-first campaigns to full-scale brand stories across every medium, we help businesses speak clearly and confidently to the people who matter.
+                </p>
+              </div>
+
+              {/* Compact Image Strip */}
+              <div className="flex gap-3 my-6 overflow-hidden">
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+                  <Image
+                    src="/images/fos-advert/fos-1.jpg"
+                    alt="FOS Advertisers workspace"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                   <Image
                     src="/images/fos-advert/fos-2.jpg"
-                    alt="FOS Advertisers team collaboration"
+                    alt="Team collaboration"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
                   />
                 </div>
-              </div>
-              
-              {/* Image 2 */}
-              <div className="col-span-6 relative mt-16 rotate-1 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md hidden sm:block">
                   <Image
                     src="/images/fos-advert/fos-3.jpg"
-                    alt="Creative advertising work"
+                    alt="Creative work"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
                   />
                 </div>
               </div>
-              
-              {/* Decorative */}
-              <div className="absolute -right-6 top-1/3 w-20 h-20 border-2 border-gold/20 rounded-full" />
-              <div className="absolute left-1/4 -bottom-4 w-14 h-14 border border-warm-300 rounded-full" />
-            </div>
-          </div>
-        </section>
 
-        {/* Services Section */}
-        <section className="py-16 lg:py-24 bg-warm-50">
-          <div className="container-padding mx-auto max-w-content">
-            <div className="mx-auto max-w-prose-wide">
-              <span className="text-label tracking-widest text-gold mb-4 block">THE COPY</span>
-              <h2 className="text-title mb-8 text-charcoal">One Agency. Every Medium.</h2>
-              
-              <div className="space-y-6">
-                {[
-                  { title: 'Digital Advertising & Social Media', desc: 'Performance-driven campaigns that cut through clutter and deliver measurable growth.' },
-                  { title: 'Print, Outdoor & Electronic Media', desc: 'Strategic visibility across newspapers, magazines, hoardings, radio, and television.' },
-                  { title: 'Branding & Creative Communication', desc: 'Identities that feel sharp, relevant, and unmistakably yours.' },
-                  { title: 'In-House Production House', desc: 'High-quality TV commercials from concept to final cut. Over 30 national brands.' },
-                ].map((service, index) => (
-                  <div key={index} className="p-6 bg-ivory rounded-xl border-l-4 border-gold">
-                    <h3 className="font-semibold text-charcoal mb-2">{service.title}</h3>
-                    <p className="text-charcoal-500">{service.desc}</p>
+              {/* Services Section */}
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-charcoal mb-2">One Agency. Every Medium.</h3>
+                <p className="text-base text-charcoal-600 leading-snug mb-4">
+                  We handle advertising in its entirety, so your brand stays consistent everywhere it appears.
+                </p>
+                
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-base font-semibold text-charcoal inline">Digital Advertising &amp; Social Media</h4>
+                    <p className="text-base text-charcoal-600 leading-snug inline"> — Performance-driven campaigns that cut through clutter, spark engagement, and deliver measurable growth.</p>
                   </div>
-                ))}
+                  
+                  <div>
+                    <h4 className="text-base font-semibold text-charcoal inline">Print, Outdoor &amp; Electronic Media</h4>
+                    <p className="text-base text-charcoal-600 leading-snug inline"> — Strategic visibility across newspapers, magazines, hoardings, radio, and television—planned for maximum impact.</p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-base font-semibold text-charcoal inline">Branding &amp; Creative Communication</h4>
+                    <p className="text-base text-charcoal-600 leading-snug inline"> — From logos to long-term brand language, we shape identities that feel sharp, relevant, and unmistakably yours.</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-charcoal text-ivory relative overflow-hidden">
-          <svg
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] text-gold opacity-5"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="currentColor"
-              d="M44.7,-52.8C57.3,-42.6,66.4,-28.1,69.8,-12.1C73.2,3.9,70.9,21.4,62.3,35.1C53.7,48.8,38.8,58.7,22.5,64.1C6.2,69.5,-11.5,70.4,-27.2,65C-42.9,59.6,-56.6,47.9,-64.5,33C-72.4,18.1,-74.5,0,-70.4,-15.8C-66.3,-31.6,-56,-45.1,-43,-54.9C-30,-64.7,-15,-70.8,0.5,-71.4C16,-72,32.1,-63,44.7,-52.8Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <p className="text-xl lg:text-2xl font-light mb-4 text-ivory/80">
-              Nearly two decades in the industry have taught us one thing:
-            </p>
-            <p className="text-2xl lg:text-3xl text-gold font-light">
-              Trends change, but good ideas endure.
-            </p>
+              {/* Production House Section */}
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-charcoal mb-2">An In-House Production House That Delivers</h3>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  FOS Advertisers runs its own full-fledged production house, producing high-quality TV commercials from concept to final cut.
+                </p>
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1 mb-3">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Over 30 national brands of repute
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Commercials produced in multiple Indian languages
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Strong storytelling, cinematic visuals, and broadcast-ready execution
+                  </li>
+                </ul>
+                <p className="text-base text-charcoal-700 font-medium italic">
+                  When we create a film, we don&apos;t just showcase a product—we build belief.
+                </p>
+              </div>
+
+              {/* Experience Section */}
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-charcoal mb-2">Experience That Shows</h3>
+                <p className="text-base text-charcoal-600 leading-snug mb-2">
+                  Nearly two decades in the industry have taught us one thing: trends change, but good ideas endure. Our experience helps us balance creativity with clarity, and ambition with practicality.
+                </p>
+                <p className="text-base text-charcoal-700 font-medium">
+                  That&apos;s why brands trust us. That&apos;s why campaigns work.
+                </p>
+              </div>
+
+              {/* CTA Section */}
+              <div className="pt-6 border-t border-warm-200 text-center">
+                <h3 className="text-lg font-semibold text-charcoal mb-2">Let&apos;s Build Something Memorable</h3>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  Whether you&apos;re launching a brand, scaling up, or redefining how the world sees you, we&apos;re ready.
+                </p>
+                <p className="text-base text-charcoal-700 font-medium">
+                  Talk to FOS Advertisers today. Let&apos;s plan your next campaign—and make it count.
+                </p>
+              </div>
+
+            </article>
           </div>
         </section>
 

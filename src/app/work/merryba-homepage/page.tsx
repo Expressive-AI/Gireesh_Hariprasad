@@ -130,255 +130,141 @@ export default function MerrybaHomepagePage() {
           </div>
         </section>
 
-        {/* Key Insight Banner */}
-        <section className="relative py-16 lg:py-20 bg-charcoal text-ivory overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
-              backgroundSize: '40px 40px'
-            }} />
-          </div>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <span className="text-label tracking-widest text-gold mb-6 block">THE INSIGHT</span>
-            <p className="text-2xl lg:text-3xl font-light leading-relaxed max-w-3xl mx-auto">
-              Customers today live on their phones.<br />
-              <span className="text-gold">If your business isn&apos;t there, your competitors will be.</span>
-            </p>
-          </div>
-        </section>
-
-        {/* Loose Image Gallery - Storytelling Layout */}
-        <section className="py-16 lg:py-24 bg-ivory">
-          <div className="container-padding mx-auto max-w-content-lg">
-            <div className="relative">
-              {/* First row - asymmetrical */}
-              <div className="grid grid-cols-12 gap-4 lg:gap-6 mb-6">
-                {/* Large image - left */}
-                <div className="col-span-8 relative -rotate-1 hover:rotate-0 transition-transform duration-500">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
-                    <Image
-                      src="/images/merryba/merryba-2.jpg"
-                      alt="Business owner using mobile app"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
-                </div>
-                
-                {/* Small image - right, offset down */}
-                <div className="col-span-4 relative mt-12 rotate-2 hover:rotate-0 transition-transform duration-500">
-                  <div className="relative aspect-square overflow-hidden rounded-xl shadow-lg">
-                    <Image
-                      src="/images/merryba/merryba-3.jpg"
-                      alt="Mobile app interface design"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
-                </div>
+        {/* Educational Longform Content Showcase */}
+        <section className="bg-ivory">
+          <div className="container-padding mx-auto max-w-prose">
+            <article className="py-8 lg:py-12">
+              {/* Project Header */}
+              <div className="mb-6 pb-4 border-b border-warm-200">
+                <p className="text-lg font-semibold text-charcoal">Merryba</p>
+                <p className="text-sm text-gold font-medium">Educational Longform Content</p>
+                <p className="text-xs text-charcoal-400 mt-1">Copywriter: Gireesh Hariprasad</p>
               </div>
 
-              {/* Second row - asymmetrical opposite */}
-              <div className="grid grid-cols-12 gap-4 lg:gap-6">
-                {/* Small image - left */}
-                <div className="col-span-5 col-start-2 relative rotate-1 hover:rotate-0 transition-transform duration-500">
-                  <div className="relative aspect-[3/4] overflow-hidden rounded-xl shadow-md">
-                    <Image
-                      src="/images/merryba/merryba-4.jpg"
-                      alt="Customer engagement through mobile app"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
-                </div>
-                
-                {/* Medium image - right */}
-                <div className="col-span-5 relative -mt-8 -rotate-2 hover:rotate-0 transition-transform duration-500">
-                  <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-lg">
-                    <Image
-                      src="/images/merryba/merryba-1.jpg"
-                      alt="Local business growth with technology"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-700"
-                    />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -right-4 top-1/4 w-20 h-20 border-2 border-gold/20 rounded-full" />
-              <div className="absolute left-1/4 -bottom-8 w-16 h-16 border border-warm-300 rounded-full" />
-            </div>
-          </div>
-        </section>
-
-        {/* Introduction - The Brief */}
-        <section className="py-16 lg:py-24 bg-warm-50">
-          <div className="container-padding mx-auto max-w-content">
-            <div className="mx-auto max-w-prose-wide">
-              <span className="text-label tracking-widest text-gold mb-4 block">THE BRIEF</span>
-              <p className="text-lead text-charcoal-600 mb-8">
-                An educational guide for Merryba, a mobile app development company focused on helping local businesses grow. 
-                The goal was to educate rather than sell — showing business owners the real value of having their own app.
-              </p>
-              <p className="text-body-lg text-charcoal-500 leading-relaxed">
-                Many local businesses still rely heavily on word of mouth and social media. 
-                This guide was written to bridge the gap between where they are and where they could be — 
-                <em>right in their customer&apos;s pocket</em>.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Key Benefits Section */}
-        <section className="py-16 lg:py-24 bg-ivory">
-          <div className="container-padding mx-auto max-w-content-lg">
-            <div className="text-center mb-12 lg:mb-16">
-              <span className="text-label tracking-widest text-gold mb-4 block">THE COPY</span>
-              <h2 className="text-title text-charcoal">Here&apos;s how an app can help you level up.</h2>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-              {/* Benefit 1 */}
-              <div className="group bg-warm-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-                  <svg className="w-7 h-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-charcoal mb-3">Stay in Their Pocket</h3>
-                <p className="text-charcoal-500 leading-relaxed">Your logo sits on their home screen. A tap away. That tiny space becomes a constant reminder of your business.</p>
-              </div>
-
-              {/* Benefit 2 */}
-              <div className="group bg-warm-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-                  <svg className="w-7 h-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-charcoal mb-3">Build Loyalty With Zero Effort</h3>
-                <p className="text-charcoal-500 leading-relaxed">Reward points, exclusive deals, birthday coupons… all automated. Happy customers return. Returning customers spend more.</p>
-              </div>
-
-              {/* Benefit 3 */}
-              <div className="group bg-warm-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-                  <svg className="w-7 h-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-charcoal mb-3">Make It Easy to Buy</h3>
-                <p className="text-charcoal-500 leading-relaxed">No more &quot;I&apos;ll check later.&quot; Customers can order, book, or shop instantly—anytime, anywhere.</p>
-              </div>
-
-              {/* Benefit 4 */}
-              <div className="group bg-warm-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-                  <svg className="w-7 h-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-charcoal mb-3">Know What People Want</h3>
-                <p className="text-charcoal-500 leading-relaxed">Valuable data—what sells, when they buy, what they love. Smarter business decisions without guesswork.</p>
-              </div>
-
-              {/* Benefit 5 */}
-              <div className="group bg-warm-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-                  <svg className="w-7 h-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-charcoal mb-3">Stand Out From the Crowd</h3>
-                <p className="text-charcoal-500 leading-relaxed">Most businesses do what everyone else does. Having your own app? That signals growth, trust, and innovation.</p>
-              </div>
-
-              {/* Benefit 6 */}
-              <div className="group bg-warm-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
-                  <svg className="w-7 h-7 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold text-charcoal mb-3">Keep Customers Updated</h3>
-                <p className="text-charcoal-500 leading-relaxed">Push notifications reach customers in real-time. No algorithm blocking your message—straight to their screen.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Merryba Section */}
-        <section className="py-16 lg:py-24 bg-warm-50">
-          <div className="container-padding mx-auto max-w-content">
-            <div className="mx-auto max-w-prose-wide">
-              <span className="text-label tracking-widest text-gold mb-4 block">THE POSITIONING</span>
-              <h2 className="text-title mb-6 text-charcoal">Why Merryba?</h2>
-              
-              <div className="space-y-6 text-charcoal-600 leading-relaxed text-lg">
-                <p>
-                  We don&apos;t just build apps. We build long-term success tools for real businesses like yours.
+              {/* Article Header */}
+              <header className="mb-6">
+                <h2 className="text-2xl lg:text-3xl font-bold text-charcoal leading-tight mb-2" style={{ fontFamily: 'var(--font-bebas)' }}>
+                  How to Grow Your Business With a Mobile App
+                </h2>
+                <p className="text-base text-charcoal-500 italic" style={{ fontFamily: 'var(--font-playfair)' }}>
+                  by Merryba – Your Local App Experts
                 </p>
-                <p>
-                  From design to launch, we make the process smooth, affordable and tailored to your goals.
+              </header>
+
+              {/* Introduction */}
+              <div className="mb-6 space-y-2">
+                <p className="text-base text-charcoal-600 leading-snug">
+                  So many local businesses rely only on word of mouth and social media, but customers today live on their phones. If your business isn&apos;t right there with them, your competitors will be. A mobile app doesn&apos;t just make you look modern. It can genuinely transform how you attract, engage and keep your customers.
                 </p>
-                <p className="font-medium text-charcoal italic">
-                  You share your dream. We turn it into a beautiful app that works like magic.
+                <p className="text-base text-charcoal font-semibold leading-snug">
+                  Here&apos;s how an app can help you level up.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Image Break */}
-        <section className="py-8 lg:py-12 bg-ivory">
-          <div className="container-padding mx-auto max-w-content-lg">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <div className="relative aspect-[21/9]">
-                <Image
-                  src="/images/merryba/merryba-2.jpg"
-                  alt="Merryba - Building apps that grow businesses"
-                  fill
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-12">
-                  <p className="text-2xl lg:text-3xl font-light text-ivory max-w-2xl">
-                    Your business deserves to be in their hands — <span className="text-gold">literally</span>.
+              {/* Compact Image Strip */}
+              <div className="flex gap-2 mb-6">
+                <div className="relative flex-1 aspect-[4/3] rounded overflow-hidden">
+                  <Image src="/images/merryba/merryba-2.jpg" alt="Business growth" fill className="object-cover" />
+                </div>
+                <div className="relative flex-1 aspect-[4/3] rounded overflow-hidden">
+                  <Image src="/images/merryba/merryba-3.jpg" alt="Mobile app" fill className="object-cover" />
+                </div>
+                <div className="relative flex-1 aspect-[4/3] rounded overflow-hidden">
+                  <Image src="/images/merryba/merryba-4.jpg" alt="Customer engagement" fill className="object-cover" />
+                </div>
+              </div>
+
+              {/* Numbered Benefits */}
+              <div className="space-y-4 mb-6">
+                {/* Benefit 1 */}
+                <div className="border-b border-warm-100 pb-3">
+                  <h3 className="text-base font-bold text-charcoal mb-1">
+                    <span className="text-gold mr-2">1.</span>Stay in Your Customer&apos;s Pocket
+                  </h3>
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    Your logo sits on their home screen. A tap away. That tiny space becomes a constant reminder of your business, making repeat purchases more natural.
+                  </p>
+                </div>
+
+                {/* Benefit 2 */}
+                <div className="border-b border-warm-100 pb-3">
+                  <h3 className="text-base font-bold text-charcoal mb-1">
+                    <span className="text-gold mr-2">2.</span>Build Loyalty With Zero Effort
+                  </h3>
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    Reward points, exclusive deals, birthday coupons… all automated inside your app. Happy customers return more often. Returning customers spend more. It&apos;s as simple as that.
+                  </p>
+                </div>
+
+                {/* Benefit 3 */}
+                <div className="border-b border-warm-100 pb-3">
+                  <h3 className="text-base font-bold text-charcoal mb-1">
+                    <span className="text-gold mr-2">3.</span>Make It Easy to Buy
+                  </h3>
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    No more &quot;I&apos;ll check later.&quot; Customers can order food, book appointments, or shop products instantly—anytime, anywhere. The faster they decide, the faster you earn.
+                  </p>
+                </div>
+
+                {/* Benefit 4 */}
+                <div className="border-b border-warm-100 pb-3">
+                  <h3 className="text-base font-bold text-charcoal mb-1">
+                    <span className="text-gold mr-2">4.</span>Get to Know What People Want
+                  </h3>
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    Your app gives you valuable data—what sells, when they buy, what they love. You make smarter business decisions without guesswork.
+                  </p>
+                </div>
+
+                {/* Benefit 5 */}
+                <div className="border-b border-warm-100 pb-3">
+                  <h3 className="text-base font-bold text-charcoal mb-1">
+                    <span className="text-gold mr-2">5.</span>Stand Out From the Crowd
+                  </h3>
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    Most local businesses do what everyone else does. Websites. Flyers. Facebook. But having your own app? That makes people take you seriously. It signals growth, trust, and innovation.
+                  </p>
+                </div>
+
+                {/* Benefit 6 */}
+                <div className="pb-3">
+                  <h3 className="text-base font-bold text-charcoal mb-1">
+                    <span className="text-gold mr-2">6.</span>Keep Every Customer Updated
+                  </h3>
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    Push notifications help you reach customers in real-time: New arrivals. Flash discounts. Seasonal updates. No algorithm blocking your message—your voice goes straight to their screen.
                   </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-charcoal text-ivory relative overflow-hidden">
-          {/* Background organic shape */}
-          <svg
-            className="absolute right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] text-gold opacity-5"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="currentColor"
-              d="M45.3,-54.2C58.3,-46.5,68.2,-32.5,72.3,-16.8C76.4,-1.1,74.7,16.3,66.7,30.1C58.7,43.9,44.4,54.1,28.9,60.1C13.4,66.1,-3.3,67.9,-19.3,64.2C-35.3,60.5,-50.6,51.3,-60.1,38C-69.6,24.7,-73.3,7.3,-70.2,-8.5C-67.1,-24.3,-57.2,-38.5,-44.3,-46.3C-31.4,-54.1,-15.7,-55.5,0.3,-55.9C16.3,-56.3,32.3,-61.9,45.3,-54.2Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <span className="text-label tracking-widest text-gold mb-6 block">LET&apos;S GROW TOGETHER</span>
-            <h2 className="text-title mb-6">
-              If you&apos;ve been thinking about the &quot;next step&quot; for your business…
-            </h2>
-            <p className="text-2xl text-gold font-light mb-8">
-              This is it.
-            </p>
-            <p className="text-lg text-ivory/70 max-w-xl mx-auto">
-              Let&apos;s create an app that keeps your customers coming back again and again.
-            </p>
+              {/* Why Merryba */}
+              <div className="bg-warm-50 rounded-lg p-5 mb-6">
+                <h3 className="text-lg font-bold text-charcoal mb-2" style={{ fontFamily: 'var(--font-bebas)' }}>
+                  Why Merryba?
+                </h3>
+                <div className="space-y-2">
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    We don&apos;t just build apps. We build long-term success tools for real businesses like yours. From design to launch, we make the process smooth, affordable and tailored to your goals.
+                  </p>
+                  <p className="text-base text-charcoal font-medium italic leading-snug" style={{ fontFamily: 'var(--font-playfair)' }}>
+                    You share your dream. We turn it into a beautiful app that works like magic.
+                  </p>
+                </div>
+              </div>
+
+              {/* CTA Section */}
+              <div className="border-t border-warm-200 pt-5">
+                <h3 className="text-lg font-bold text-charcoal mb-2" style={{ fontFamily: 'var(--font-bebas)' }}>
+                  Let&apos;s Grow Together
+                </h3>
+                <p className="text-base text-charcoal-600 leading-snug mb-3">
+                  If you&apos;ve been thinking about the &quot;next step&quot; for your business… this is it. Book a free consultation with Merryba today. Let&apos;s create an app that keeps your customers coming back again and again.
+                </p>
+                <p className="text-base text-charcoal font-semibold leading-snug">
+                  Your business deserves to be in their hands — <span className="text-gold">literally</span>.
+                </p>
+              </div>
+            </article>
           </div>
         </section>
 

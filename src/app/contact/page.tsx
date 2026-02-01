@@ -1,26 +1,107 @@
-import type { Metadata } from 'next';
+'use client';
+
+import { useState, FormEvent } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import Link from 'next/link';
 
-export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Get in touch with Gireesh Hariprasad for copywriting projects. Let\'s make something that works.',
-  openGraph: {
-    title: 'Contact Gireesh Hariprasad | Copywriter',
-    description: 'Get in touch for copywriting projects. Let\'s make something that works.',
-    url: 'https://gireeshhariprasad.com/contact',
-  },
-  twitter: {
-    title: 'Contact Gireesh Hariprasad | Copywriter',
-    description: 'Get in touch for copywriting projects.',
-  },
-  alternates: {
-    canonical: 'https://gireeshhariprasad.com/contact',
-  },
-};
+// Form data interface
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
+// Form errors interface
+interface FormErrors {
+  name?: string;
+  email?: string;
+  message?: string;
+}
+
+// API response interface
+interface ApiResponse {
+  success?: boolean;
+  error?: string;
+}
 
 export default function ContactPage() {
+  // Form state
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    message: '',
+  });
+  
+  // UI state
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  // Validate form
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  // Handle input change
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (errors[name as keyof FormErrors]) {
+      setErrors(prev => ({ ...prev, [name]: undefined }));
+    }
+  };
+
+  // Handle form submission
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) return;
+
+    setIsLoading(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data: ApiResponse = await response.json();
+
+      if (response.ok && data.success) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch {
+      setSubmitStatus('error');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <>
       <Header />
@@ -64,7 +145,7 @@ export default function ContactPage() {
               {/* Left Column - Contact Info */}
               <div>
                 <p className="text-body-lg mb-10">
-                  Whether it’s a role, a project, or an idea worth exploring—start here.
+                  Whether it's a role, a project, or an idea worth exploring—start here.
                 </p>
                 
                 {/* Phone */}
@@ -95,7 +176,7 @@ export default function ContactPage() {
                     Email
                   </span>
                   <a
-                    href="mailto:hello@gireeshhariprasad.com"
+                    href="mailto:gireesh2hariprasad@gmail.com"
                     className="group inline-flex items-center gap-2 text-body-lg font-medium text-charcoal transition-colors hover:text-gold"
                   >
                     gireesh2hariprasad@gmail.com
@@ -123,12 +204,12 @@ export default function ContactPage() {
                 {/* Closing statement */}
                 <div className="rounded-xl border border-gold/30 bg-gold/5 p-6">
                   <p className="text-body text-charcoal-600 m-0">
-                    If you believe good writing still matters—and deserves to be challenged every day—you’ll feel right at home working together.
+                    If you believe good writing still matters—and deserves to be challenged every day—you'll feel right at home working together.
                   </p>
                 </div>
               </div>
 
-              {/* Right Column - Quick Action */}
+              {/* Right Column - Contact Form */}
               <div className="rounded-2xl bg-warm-50 p-8 lg:p-10">
                 <h2 
                   className="mb-4"
@@ -140,22 +221,173 @@ export default function ContactPage() {
                 >
                   Start a conversation
                 </h2>
-                <p className="mb-8 text-body text-charcoal-500">
-                  Click below to open your email client with my address pre-filled.
+                <p className="mb-6 text-body text-charcoal-500">
+                  Fill out the form below and I&apos;ll get back to you.
                 </p>
 
-                <a
-                  href="mailto:hello@gireeshhariprasad.com?subject=Project%20Inquiry&body=Hi%20Gireesh,%0A%0AI'd%20like%20to%20discuss%20a%20project%20with%20you.%0A%0A"
-                  className="group mb-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-charcoal px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold hover:tracking-[0.15em] hover:shadow-lg"
-                  style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
-                >
-                  Send an email
-                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-                    
-                  </span>
-                </a>
+                {/* Success Message */}
+                {submitStatus === 'success' && (
+                  <div 
+                    className="mb-6 rounded-lg border border-green-200 bg-green-50 p-4"
+                    role="alert"
+                    aria-live="polite"
+                  >
+                    <div className="flex items-start gap-3">
+                      <svg className="h-5 w-5 flex-shrink-0 text-green-600 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <p className="text-sm text-green-800">
+                        Message sent successfully! I&apos;ll get back to you within 24-48 hours.
+                      </p>
+                    </div>
+                  </div>
+                )}
 
-                <div className="border-t border-warm-200 pt-8">
+                {/* Error Message */}
+                {submitStatus === 'error' && (
+                  <div 
+                    className="mb-6 rounded-lg border border-red-200 bg-red-50 p-4"
+                    role="alert"
+                    aria-live="polite"
+                  >
+                    <div className="flex items-start gap-3">
+                      <svg className="h-5 w-5 flex-shrink-0 text-red-600 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                      <p className="text-sm text-red-800">
+                        Failed to send message. Please try emailing me directly at{' '}
+                        <a href="mailto:gireesh2hariprasad@gmail.com" className="underline hover:no-underline">
+                          gireesh2hariprasad@gmail.com
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                )}
+
+                <form onSubmit={handleSubmit} noValidate>
+                  {/* Name Field */}
+                  <div className="mb-5">
+                    <label 
+                      htmlFor="name" 
+                      className="mb-2 block text-sm tracking-[0.08em] uppercase text-charcoal-500"
+                      style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
+                    >
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                      aria-invalid={errors.name ? 'true' : 'false'}
+                      aria-describedby={errors.name ? 'name-error' : undefined}
+                      className={`w-full rounded-lg border bg-white px-4 py-3 text-charcoal transition-colors focus:outline-none focus:ring-2 focus:ring-gold/50 ${
+                        errors.name 
+                          ? 'border-red-400 focus:border-red-400' 
+                          : 'border-warm-200 focus:border-gold'
+                      }`}
+                      placeholder="Your name"
+                    />
+                    {errors.name && (
+                      <p id="name-error" className="mt-1.5 text-sm text-red-600" role="alert">
+                        {errors.name}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Email Field */}
+                  <div className="mb-5">
+                    <label 
+                      htmlFor="email" 
+                      className="mb-2 block text-sm tracking-[0.08em] uppercase text-charcoal-500"
+                      style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      aria-invalid={errors.email ? 'true' : 'false'}
+                      aria-describedby={errors.email ? 'email-error' : undefined}
+                      className={`w-full rounded-lg border bg-white px-4 py-3 text-charcoal transition-colors focus:outline-none focus:ring-2 focus:ring-gold/50 ${
+                        errors.email 
+                          ? 'border-red-400 focus:border-red-400' 
+                          : 'border-warm-200 focus:border-gold'
+                      }`}
+                      placeholder="your@email.com"
+                    />
+                    {errors.email && (
+                      <p id="email-error" className="mt-1.5 text-sm text-red-600" role="alert">
+                        {errors.email}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Message Field */}
+                  <div className="mb-6">
+                    <label 
+                      htmlFor="message" 
+                      className="mb-2 block text-sm tracking-[0.08em] uppercase text-charcoal-500"
+                      style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                      rows={5}
+                      aria-invalid={errors.message ? 'true' : 'false'}
+                      aria-describedby={errors.message ? 'message-error' : undefined}
+                      className={`w-full resize-none rounded-lg border bg-white px-4 py-3 text-charcoal transition-colors focus:outline-none focus:ring-2 focus:ring-gold/50 ${
+                        errors.message 
+                          ? 'border-red-400 focus:border-red-400' 
+                          : 'border-warm-200 focus:border-gold'
+                      }`}
+                      placeholder="Tell me about your project..."
+                    />
+                    {errors.message && (
+                      <p id="message-error" className="mt-1.5 text-sm text-red-600" role="alert">
+                        {errors.message}
+                      </p>
+                    )}
+                  </div>
+
+                  {/* Submit Button */}
+                  <button
+                    type="submit"
+                    disabled={isLoading}
+                    className="group mb-6 inline-flex w-full items-center justify-center gap-3 rounded-full bg-charcoal px-8 py-4 text-sm uppercase tracking-[0.12em] text-ivory transition-all duration-300 hover:-translate-y-0.5 hover:bg-gold hover:tracking-[0.15em] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:bg-charcoal disabled:hover:shadow-none"
+                    style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
+                  >
+                    {isLoading ? (
+                      <>
+                        <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send message
+                        <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
+                          →
+                        </span>
+                      </>
+                    )}
+                  </button>
+                </form>
+
+                <div className="border-t border-warm-200 pt-6">
                   <p className="text-body-sm text-charcoal-500">
                     <strong className="font-medium text-charcoal">Response time:</strong>{' '}
                     I typically respond within 24-48 hours during weekdays.

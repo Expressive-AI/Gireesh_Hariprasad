@@ -60,7 +60,7 @@ export default function WorkPage() {
             Portfolio
           </span>
           <h1 className="text-display mb-6 max-w-[16ch]">
-            Selected <em className="font-normal italic">Work</em>
+            A few <em className="font-normal italic">Samples</em>
           </h1>
           <p className="text-lead max-w-prose text-charcoal-500">
             A curated collection of copywriting projects spanning advertising, websites, 

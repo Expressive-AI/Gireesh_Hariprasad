@@ -77,11 +77,10 @@ export default function Header() {
               />
               <div className="flex flex-col">
                 <span 
-                  className="text-xl tracking-wide text-charcoal sm:text-2xl lg:text-3xl"
+                  className="text-lg font-bold tracking-wide text-charcoal sm:text-xl lg:text-3xl"
                   style={{ 
-                    fontFamily: "'Gravitas One', cursive",
-                    letterSpacing: '0.02em',
-                    textShadow: '0 2px 4px rgba(31, 26, 24, 0.08)'
+                    fontFamily: 'var(--font-playfair), serif',
+                    letterSpacing: '0.01em'
                   }}
                 >
                   Gireesh Hariprasad

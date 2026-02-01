@@ -27,7 +27,7 @@ export default function ZamosaPetGroomingPage() {
       <Header />
       <main className="min-h-screen bg-ivory">
         {/* Hero Section with Asymmetrical Organic Shapes */}
-        <section className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32">
+        <section className="relative overflow-hidden pt-28 pb-14 lg:pt-36 lg:pb-20">
           {/* Organic Background Shapes */}
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
             {/* Large organic blob - top right */}
@@ -82,16 +82,16 @@ export default function ZamosaPetGroomingPage() {
               </ol>
             </nav>
 
-            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               {/* Hero Text */}
               <div>
-                <span className="text-label tracking-widest text-gold mb-4 block">
-                  PROMOTIONAL FLYER
+                <span className="text-label tracking-widest text-gold mb-3 block">
+                  THE COPY
                 </span>
-                <h1 className="text-display mb-6 text-charcoal">
+                <h1 className="text-display mb-4 text-charcoal uppercase">
                   Zamosa Pet Grooming
                 </h1>
-                <p className="text-2xl lg:text-3xl font-light text-charcoal-600 italic mb-8" style={{ fontFamily: 'var(--font-playfair)' }}>
+                <p className="text-2xl lg:text-3xl font-light text-charcoal-600 italic mb-6" style={{ fontFamily: 'var(--font-playfair)' }}>
                   Treatments that make your dog more lovely
                 </p>
                 <div className="flex flex-wrap items-center gap-6 text-charcoal-500">
@@ -106,8 +106,8 @@ export default function ZamosaPetGroomingPage() {
                   </div>
                   <div className="h-10 w-px bg-warm-200" />
                   <div>
-                    <span className="text-label block text-charcoal-400 mb-1">Location</span>
-                    <span className="text-body font-medium text-charcoal">United Kingdom</span>
+                    <span className="text-label block text-charcoal-400 mb-1">Copywriter</span>
+                    <span className="text-body font-medium text-charcoal">Gireesh Hariprasad</span>
                   </div>
                 </div>
               </div>
@@ -146,278 +146,145 @@ export default function ZamosaPetGroomingPage() {
           </div>
         </section>
 
-        {/* 30% Off Success Banner */}
-        <section className="relative py-16 lg:py-24 bg-charcoal text-ivory overflow-hidden">
-          {/* Subtle pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
-              backgroundSize: '32px 32px'
-            }} />
-          </div>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content-lg text-center">
-            <span className="text-label tracking-widest text-gold mb-4 block">THE OFFER</span>
-            <div className="flex items-center justify-center gap-4 lg:gap-8 mb-6">
-              <div className="h-px flex-1 max-w-24 bg-gold/40" />
-              <span className="text-8xl lg:text-[10rem] font-bold text-gold" style={{ fontFamily: 'var(--font-bebas)' }}>
-                30%
-              </span>
-              <div className="h-px flex-1 max-w-24 bg-gold/40" />
-            </div>
-            <p className="text-2xl lg:text-3xl font-light mb-2">OFF ALL SERVICES</p>
-            <p className="text-lg text-ivory/70 italic">It&apos;s our love for you. Throughout May 2025</p>
-          </div>
-        </section>
+        {/* Editorial Copy Section - Dense, Continuous Reading Experience */}
+        <section className="bg-ivory">
+          <div className="container-padding mx-auto max-w-prose">
+            {/* The Copy - Editorial Layout */}
+            <article className="py-8 lg:py-12">
+              {/* Offer Banner - Inline with copy */}
+              <div className="text-center mb-8 pb-8 border-b border-warm-200">
+                <p className="text-4xl lg:text-5xl font-bold text-gold tracking-tight" style={{ fontFamily: 'var(--font-bebas)' }}>
+                  GET 30% OFF ALL SERVICES
+                </p>
+                <p className="text-lg text-charcoal-600 mt-2">It&apos;s our love for you.</p>
+                <p className="text-base text-charcoal-500 italic">Throughout May 2025</p>
+              </div>
 
-        {/* Loose Image Gallery Layout */}
-        <section className="py-16 lg:py-24 bg-ivory">
-          <div className="container-padding mx-auto max-w-content-lg">
-            <div className="relative grid grid-cols-12 gap-4 lg:gap-6 min-h-[600px] lg:min-h-[700px]">
-              {/* Image 1 - Large, offset top-left */}
-              <div className="col-span-7 row-span-2 relative -rotate-2 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl">
+              {/* Why Zamosa */}
+              <div className="mb-6">
+                <h2 className="text-2xl lg:text-3xl font-semibold text-charcoal mb-2">Why Zamosa?</h2>
+                <p className="text-lg text-charcoal-600 italic mb-3">It&apos;s all about providing dedicated service.</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-1">Because we understand how much you love your pet.</p>
+                <p className="text-base text-charcoal-600 leading-snug mb-1">We treat every dog that walks in with this affection and patience.</p>
+                <p className="text-base text-charcoal-700 leading-snug font-medium">So, we groom with heart to the best of your satisfaction.</p>
+              </div>
+
+              {/* Compact Image Strip */}
+              <div className="flex gap-3 my-8 overflow-hidden">
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                   <Image
                     src="/images/zamosa/zamoa_pet-1.jpg"
-                    alt="Beautifully groomed dog enjoying the sunshine"
+                    alt="Beautifully groomed dog"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
                   />
                 </div>
-              </div>
-              
-              {/* Image 2 - Medium, offset right */}
-              <div className="col-span-5 col-start-8 relative mt-12 rotate-3 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg">
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md">
                   <Image
                     src="/images/zamosa/zamoa_pet-2.jpg"
-                    alt="Happy dog after grooming session"
+                    alt="Happy dog after grooming"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
                   />
                 </div>
-              </div>
-              
-              {/* Image 3 - Small, floating middle-right */}
-              <div className="col-span-4 col-start-9 relative -rotate-1 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-[3/4] overflow-hidden rounded-xl shadow-md">
+                <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-md hidden sm:block">
                   <Image
                     src="/images/zamosa/zamoa_pet-3.jpg"
-                    alt="Calm dog during gentle grooming"
+                    alt="Calm groomed dog"
                     fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
+                    className="object-cover"
                   />
                 </div>
               </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -left-8 top-1/4 w-16 h-16 border-2 border-gold/30 rounded-full" />
-              <div className="absolute right-1/4 bottom-12 w-24 h-24 border border-warm-300 rounded-full" />
-            </div>
-          </div>
-        </section>
 
-        {/* Introduction - The Brief */}
-        <section className="py-16 lg:py-24 bg-warm-50">
-          <div className="container-padding mx-auto max-w-content">
-            <div className="mx-auto max-w-prose-wide">
-              <span className="text-label tracking-widest text-gold mb-4 block">THE BRIEF</span>
-              <p className="text-lead text-charcoal-600 mb-8">
-                This project involved writing a promotional flyer for a pet grooming service based in the UK. 
-                The brief was clear: the communication should never feel loud, aggressive, or salesy. 
-                It had to feel affectionate, calm, and trustworthy — just like the relationship between people and their pets.
-              </p>
-              <p className="text-body-lg text-charcoal-500 leading-relaxed">
-                A key creative principle followed here was to <em>never show the act of grooming itself</em>. 
-                Instead, the copy and visuals focus on the result — a calm, happy, beautifully groomed dog. 
-                The idea is simple: don&apos;t show the process, show the outcome.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Zamosa Section */}
-        <section className="py-16 lg:py-24 bg-ivory">
-          <div className="container-padding mx-auto max-w-content">
-            <div className="mx-auto max-w-prose-wide">
-              <span className="text-label tracking-widest text-gold mb-4 block">THE COPY</span>
-              <h2 className="text-title mb-6 text-charcoal">Why Zamosa?</h2>
-              <p className="text-xl lg:text-2xl font-light text-charcoal-600 italic mb-8">
-                It&apos;s all about providing dedicated service.
-              </p>
-              
-              <div className="space-y-6 text-charcoal-600 leading-relaxed">
-                <p>Because we understand how much you love your pet.</p>
-                <p>We treat every dog that walks in with this affection and patience.</p>
-                <p className="font-medium text-charcoal">So, we groom with heart to the best of your satisfaction.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-16 lg:py-24 bg-warm-50">
-          <div className="container-padding mx-auto max-w-content-lg">
-            <div className="text-center mb-12 lg:mb-16">
-              <span className="text-label tracking-widest text-gold mb-4 block">DELIVERED COPY</span>
-              <h2 className="text-title text-charcoal">Our Services</h2>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-              {/* Service 1 */}
-              <div className="group">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                    </svg>
-                  </div>
+              {/* Our Services */}
+              <div className="mb-6">
+                <h2 className="text-2xl lg:text-3xl font-semibold text-charcoal mb-4">Our Services</h2>
+                
+                <div className="space-y-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">Full Body Bath &amp; Blow Dry</h3>
-                    <p className="text-charcoal-500 leading-relaxed">Deep cleansing that leaves your dog fresh, relaxed and cuddly, removing dirt, odour and stress.</p>
+                    <h3 className="text-base font-semibold text-charcoal inline">Full Body Bath &amp; Blow Dry</h3>
+                    <p className="text-base text-charcoal-600 leading-snug inline"> — Deep cleansing that leaves your dog fresh, relaxed and cuddly, removing dirt, odour and stress.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-base font-semibold text-charcoal inline">Breed-specific Haircuts &amp; Styling</h3>
+                    <p className="text-base text-charcoal-600 leading-snug inline"> — Not just a one-style-fits-all trim, but tailored cuts that suit your dog&apos;s breed, coat and personality.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-base font-semibold text-charcoal inline">De-shedding Treatment</h3>
+                    <p className="text-base text-charcoal-600 leading-snug inline"> — Reduces hair fall and keeps your home cleaner.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-base font-semibold text-charcoal inline">Nail Trimming &amp; Paw Care</h3>
+                    <p className="text-base text-charcoal-600 leading-snug inline"> — No pain, posture issues and scratches. Only short nails, soft paws and happy walks.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-base font-semibold text-charcoal inline">Ear Cleaning</h3>
+                    <p className="text-base text-charcoal-600 leading-snug inline"> — Care that prevents infections, itching and foul smells.</p>
+                  </div>
+                  
+                  <div>
+                    <h3 className="text-base font-semibold text-charcoal inline">Tick &amp; Flea Treatment</h3>
+                    <p className="text-base text-charcoal-600 leading-snug inline"> — Effective treatment that leaves your dog itch-free.</p>
                   </div>
                 </div>
               </div>
 
-              {/* Service 2 */}
-              <div className="group">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">Breed-specific Haircuts &amp; Styling</h3>
-                    <p className="text-charcoal-500 leading-relaxed">Not just a one-style-fits-all trim, but tailored cuts that suit your dog&apos;s breed, coat and personality.</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Service 3 */}
-              <div className="group">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">De-shedding Treatment</h3>
-                    <p className="text-charcoal-500 leading-relaxed">Reduces hair fall and keeps your home cleaner.</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Service 4 */}
-              <div className="group">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">Nail Trimming &amp; Paw Care</h3>
-                    <p className="text-charcoal-500 leading-relaxed">No pain, posture issues and scratches. Only short nails, soft paws and happy walks.</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Service 5 */}
-              <div className="group">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">Ear Cleaning</h3>
-                    <p className="text-charcoal-500 leading-relaxed">Care that prevents infections, itching and foul smells.</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Service 6 */}
-              <div className="group">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                    <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-charcoal mb-2">Tick &amp; Flea Treatment</h3>
-                    <p className="text-charcoal-500 leading-relaxed">Effective treatment that leaves your dog itch-free.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Promise Section */}
-        <section className="py-16 lg:py-24 bg-ivory">
-          <div className="container-padding mx-auto max-w-content">
-            <div className="mx-auto max-w-prose-wide">
-              <h2 className="text-title mb-8 text-charcoal">We promise:</h2>
-              
-              <ul className="space-y-4 mb-12">
-                {[
-                  'Expert service',
-                  'Calm handling',
-                  'Hygienic treatment',
-                  'Honest advice',
-                  "Your dog's safety and comfort"
-                ].map((promise, index) => (
-                  <li key={index} className="flex items-center gap-4 text-lg text-charcoal-600">
-                    <span className="flex-shrink-0 w-2 h-2 rounded-full bg-gold" />
-                    {promise}
+              {/* We Promise */}
+              <div className="mb-6">
+                <h2 className="text-2xl lg:text-3xl font-semibold text-charcoal mb-3">We promise:</h2>
+                <ul className="text-base text-charcoal-600 leading-snug space-y-1">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Expert service
                   </li>
-                ))}
-              </ul>
-              
-              <div className="border-l-4 border-gold pl-6 py-4 bg-warm-50 rounded-r-lg">
-                <p className="text-xl text-charcoal font-medium italic">
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Calm handling
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Hygienic treatment
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Honest advice
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
+                    Your dog&apos;s safety and comfort
+                  </li>
+                </ul>
+              </div>
+
+              {/* Commitment Statement */}
+              <div className="border-l-3 border-gold pl-4 mb-8">
+                <p className="text-lg text-charcoal font-medium italic leading-snug">
                   At Zamosa, grooming isn&apos;t just another service. It&apos;s commitment.
                 </p>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-charcoal text-ivory relative overflow-hidden">
-          {/* Background organic shape */}
-          <svg
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] text-gold opacity-5"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="currentColor"
-              d="M44.7,-52.8C57.3,-42.6,66.4,-28.1,69.8,-12.1C73.2,3.9,70.9,21.4,62.3,35.1C53.7,48.8,38.8,58.7,22.5,64.1C6.2,69.5,-11.5,70.4,-27.2,65C-42.9,59.6,-56.6,47.9,-64.5,33C-72.4,18.1,-74.5,0,-70.4,-15.8C-66.3,-31.6,-56,-45.1,-43,-54.9C-30,-64.7,-15,-70.8,0.5,-71.4C16,-72,32.1,-63,44.7,-52.8Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <h2 className="text-title mb-4">
-              Book now. <span className="text-gold">Save 30%</span>
-            </h2>
-            <p className="text-xl text-ivory/80 mb-8">
-              Give your dog the best care it deserves. At a price you can easily afford.
-            </p>
-            <div className="mt-8">
-              <p className="text-lg font-medium text-gold mb-2">Zamosa Pet Grooming</p>
-              <p className="text-ivory/60 italic">For wag-worthy results</p>
-            </div>
+              {/* CTA - Inline with copy */}
+              <div className="text-center pt-6 border-t border-warm-200">
+                <p className="text-2xl lg:text-3xl font-semibold text-charcoal mb-1">
+                  Book now. <span className="text-gold">Save 30%</span>
+                </p>
+                <p className="text-base text-charcoal-600 mb-4">
+                  Give your dog the best care it deserves. At a price you can easily afford.
+                </p>
+                <p className="text-lg font-medium text-gold">Zamosa Pet Grooming</p>
+                <p className="text-sm text-charcoal-500 italic">For wag-worthy results</p>
+              </div>
+            </article>
           </div>
         </section>
 
         {/* Navigation */}
-        <nav className="border-t border-warm-200 bg-ivory py-12 lg:py-16">
+        <nav className="border-t border-warm-200 bg-ivory py-10 lg:py-12">
           <div className="container-padding mx-auto max-w-content-lg">
             <div className="flex flex-col gap-8 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex-1">

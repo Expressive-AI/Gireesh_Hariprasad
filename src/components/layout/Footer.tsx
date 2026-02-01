@@ -103,9 +103,9 @@ export default function Footer() {
                 className="h-10 w-auto sm:h-12"
               />
               <span 
-                className="text-2xl tracking-wide text-charcoal sm:text-3xl"
+                className="text-lg font-bold tracking-wide text-charcoal sm:text-xl lg:text-3xl"
                 style={{ 
-                  fontFamily: "'Gravitas One', cursive",
+                  fontFamily: 'var(--font-playfair), serif',
                   letterSpacing: '0.02em'
                 }}
               >

@@ -129,107 +129,124 @@ export default function ChilampuPage() {
           </div>
         </section>
 
-        {/* Key Message Banner */}
-        <section className="relative py-16 lg:py-20 bg-charcoal text-ivory overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute inset-0" style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, currentColor 1px, transparent 0)`,
-              backgroundSize: '40px 40px'
-            }} />
-          </div>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <span className="text-label tracking-widest text-gold mb-6 block">THE ESSENCE</span>
-            <p className="text-2xl lg:text-3xl font-light leading-relaxed max-w-3xl mx-auto">
-              Bharatanatyam isn&apos;t just a dance form.<br />
-              <span className="text-gold">It builds rhythm, balance, discipline — and confidence.</span>
-            </p>
-          </div>
-        </section>
-
-        {/* Loose Image Gallery */}
-        <section className="py-16 lg:py-24 bg-ivory">
-          <div className="container-padding mx-auto max-w-content-lg">
-            <div className="relative grid grid-cols-12 gap-4 lg:gap-6">
-              {/* Image 1 - Large */}
-              <div className="col-span-7 relative -rotate-2 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl">
-                  <Image
-                    src="/images/chilampu/Bharathanatyam-2.jpg"
-                    alt="Young dancer learning classical steps"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
+        {/* Email Copywriting Showcase - Dense, Editorial Layout */}
+        <section className="bg-ivory">
+          <div className="container-padding mx-auto max-w-prose">
+            <article className="py-8 lg:py-12">
+              
+              {/* Project Header */}
+              <div className="mb-6 pb-4 border-b border-warm-200">
+                <p className="text-lg font-semibold text-charcoal">Chilampu Bharathanatyam School</p>
+                <p className="text-sm text-gold font-medium">Email</p>
               </div>
-              
-              {/* Image 2 - Medium, offset */}
-              <div className="col-span-5 col-start-8 relative mt-16 rotate-2 hover:rotate-0 transition-transform duration-500">
-                <div className="relative aspect-square overflow-hidden rounded-2xl shadow-lg">
-                  <Image
-                    src="/images/chilampu/Bharathanatyam-3.jpg"
-                    alt="Traditional Bharatanatyam performance"
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
-              </div>
-              
-              {/* Decorative elements */}
-              <div className="absolute -left-6 top-1/3 w-16 h-16 border-2 border-gold/30 rounded-full" />
-              <div className="absolute right-1/4 bottom-8 w-20 h-20 border border-warm-300 rounded-full" />
-            </div>
-          </div>
-        </section>
 
-        {/* The Promise Section */}
-        <section className="py-16 lg:py-24 bg-warm-50">
-          <div className="container-padding mx-auto max-w-content">
-            <div className="mx-auto max-w-prose-wide">
-              <span className="text-label tracking-widest text-gold mb-4 block">THE COPY</span>
-              <h2 className="text-title mb-8 text-charcoal">What your child will gain</h2>
-              
-              <div className="grid sm:grid-cols-2 gap-6">
-                {[
-                  { title: 'Classical Foundation', desc: 'Mastery of authentic steps at the right age' },
-                  { title: 'Mind & Body', desc: 'Improved concentration and physical flexibility' },
-                  { title: 'Cultural Connection', desc: 'A deep bond with Indian heritage and tradition' },
-                  { title: 'Stage Presence', desc: 'The grace, expression and confidence of a true performer' },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-4 p-6 bg-ivory rounded-xl">
-                    <span className="flex-shrink-0 w-2 h-2 mt-2.5 rounded-full bg-gold" />
-                    <div>
-                      <h3 className="font-semibold text-charcoal mb-1">{item.title}</h3>
-                      <p className="text-charcoal-500 text-sm">{item.desc}</p>
+              {/* Email Container */}
+              <div className="bg-white rounded-lg shadow-sm border border-warm-200 p-6 lg:p-8">
+                
+                {/* Subject Line */}
+                <div className="mb-4 pb-4 border-b border-warm-100">
+                  <p className="text-sm text-charcoal-400 mb-1">Subject:</p>
+                  <p className="text-base font-semibold text-charcoal">New Bharatanatyam Classes for Kids – Enrol Now for 2026!</p>
+                </div>
+
+                {/* Email Body */}
+                <div className="space-y-4">
+                  {/* Greeting */}
+                  <p className="text-base text-charcoal-700">Dear Parents,</p>
+                  
+                  {/* Opening */}
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    We&apos;re thrilled to share some exciting news with you!
+                  </p>
+                  
+                  {/* Main Body */}
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    Chilampu Indian Dance Academy is launching a brand-new Bharatanatyam class for children, starting 14th January 2026. It&apos;s the perfect opportunity for young learners to step into the enchanting world of Indian classical dance.
+                  </p>
+                  
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    Bharatanatyam isn&apos;t just a dance form. It builds a strong foundation in rhythm, balance, coordination and discipline. Children absorb the music, the movements, and the stories behind every step. As they grow, their confidence grows too. And who knows? This early spark might just lead them to become skilled performers on stage… or even open doors to a future in cinema and acting.
+                  </p>
+                  
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    At Chilampu, we focus on nurturing talent with love, patience and authentic training.
+                  </p>
+
+                  {/* Compact Image Strip */}
+                  <div className="flex gap-3 my-4 overflow-hidden">
+                    <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-sm">
+                      <Image
+                        src="/images/chilampu/Bharathanatyam-1.jpg"
+                        alt="Bharatanatyam dancer"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-sm">
+                      <Image
+                        src="/images/chilampu/Bharathanatyam-2.jpg"
+                        alt="Young dancer learning"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex-1 relative aspect-[4/3] rounded-lg overflow-hidden shadow-sm hidden sm:block">
+                      <Image
+                        src="/images/chilampu/Bharathanatyam-3.jpg"
+                        alt="Traditional performance"
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24 bg-charcoal text-ivory relative overflow-hidden">
-          <svg
-            className="absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] text-gold opacity-5"
-            viewBox="0 0 200 200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill="currentColor"
-              d="M44.7,-52.8C57.3,-42.6,66.4,-28.1,69.8,-12.1C73.2,3.9,70.9,21.4,62.3,35.1C53.7,48.8,38.8,58.7,22.5,64.1C6.2,69.5,-11.5,70.4,-27.2,65C-42.9,59.6,-56.6,47.9,-64.5,33C-72.4,18.1,-74.5,0,-70.4,-15.8C-66.3,-31.6,-56,-45.1,-43,-54.9C-30,-64.7,-15,-70.8,0.5,-71.4C16,-72,32.1,-63,44.7,-52.8Z"
-              transform="translate(100 100)"
-            />
-          </svg>
-          
-          <div className="container-padding relative z-10 mx-auto max-w-content text-center">
-            <p className="text-xl lg:text-2xl font-light mb-4 text-ivory/80">
-              Let Chilampu be the beginning of their artistic story.
-            </p>
-            <p className="text-lg text-gold italic">
-              Seats are limited. Classes starting 14th January 2026.
-            </p>
+                  {/* Benefits Section */}
+                  <div>
+                    <p className="text-base text-charcoal-700 font-medium mb-2">What your child will gain:</p>
+                    <ul className="text-base text-charcoal-600 leading-snug space-y-1">
+                      <li className="flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 mt-2" />
+                        Mastery of classical steps at the right age
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 mt-2" />
+                        Improved concentration and physical flexibility
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 mt-2" />
+                        A deep connection with Indian heritage and culture
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0 mt-2" />
+                        The grace, expression and confidence of a true performer
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* Invitation */}
+                  <p className="text-base text-charcoal-600 leading-snug">
+                    We would love to have your little one join us on this beautiful journey of dance and expression.
+                  </p>
+
+                  {/* CTA */}
+                  <p className="text-base text-charcoal-700 font-medium">
+                    Seats are limited! Call or reply to this email to reserve your child&apos;s spot.
+                  </p>
+
+                  {/* Closing Tagline */}
+                  <p className="text-base text-charcoal-600 italic leading-snug">
+                    Let them dance. Let them shine. Let Chilampu be the beginning of their artistic story.
+                  </p>
+
+                  {/* Signature */}
+                  <div className="pt-4">
+                    <p className="text-base text-charcoal-600">Warm regards,</p>
+                    <p className="text-base text-charcoal-700 font-medium">Chilampu Indian Dance Academy</p>
+                  </div>
+                </div>
+              </div>
+
+            </article>
           </div>
         </section>
 
