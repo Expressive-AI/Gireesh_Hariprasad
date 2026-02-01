@@ -1,14 +1,3 @@
-/**
- * Skills Page
- *
- * What I write. And where it works.
- * Exact verbatim copy as specified.
- * 
- * Highlighted Catchphrases:
- * - "What I write. And where it works."
- * - "to drive people towards brands, products, and services — and keep them there."
- */
-
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -16,15 +5,15 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Skills',
-  description: 'What I write. And where it works. Copywriting expertise in press ads, digital campaigns, websites, emails, and more.',
+  description: 'What works for you. And where it works. Copywriting expertise in press ads, digital campaigns, websites, emails, and more.',
   openGraph: {
     title: 'Skills | Gireesh Hariprasad Copywriter',
-    description: 'What I write. And where it works. Press ads, digital campaigns, websites, emails, brochures, and direct response copy.',
+    description: 'What works for you. And where it works. Press ads, digital campaigns, websites, emails, brochures, and direct response copy.',
     url: 'https://gireeshhariprasad.com/skills',
   },
   twitter: {
     title: 'Skills | Gireesh Hariprasad Copywriter',
-    description: 'What I write. And where it works.',
+    description: 'What works for you. And where it works.',
   },
   alternates: {
     canonical: 'https://gireeshhariprasad.com/skills',
@@ -33,10 +22,9 @@ export const metadata: Metadata = {
 
 const copywritingExpertise = [
   'Press advertisements',
-  'Outdoor and OOH copy',
-  'Digital and social media campaigns',
+  'OOH copy',
+  'Digital and social media',
   'Website home pages and landing pages',
-  'Web guides and explainer content',
   'Email campaigns and newsletters',
   'Flyers, brochures, and sales collateral',
   'Direct response copy',
@@ -68,15 +56,15 @@ export default function SkillsPage() {
               letterSpacing: '-0.02em'
             }}
           >
-            What I <span className="relative inline-block">
-              write
+            What work for <span className="relative inline-block">
+              You
               <span className="absolute -bottom-1 left-0 h-0.5 w-full bg-gold/50" />
             </span>.<br />
             And where it <span className="italic">works</span>.
           </h1>
           
           <p className="text-lead max-w-prose">
-            I&apos;m comfortable writing across platforms, formats, and attention spans. Each medium demands its own discipline — and I respect that.
+            You get copy that adapts across platforms, formats, and attention spans. Each medium demands its own discipline—and that discipline is respected.
           </p>
         </section>
 
@@ -90,7 +78,7 @@ export default function SkillsPage() {
                   className="mb-6 inline-block text-sm tracking-[0.12em] uppercase text-charcoal-500"
                   style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
                 >
-                  Copywriting Expertise Includes
+                  Your copywriting needs are covered across:
                 </span>
                 
                 <ul className="space-y-4 mt-8">
@@ -106,7 +94,7 @@ export default function SkillsPage() {
               {/* Right Column - Approach */}
               <div className="prose-premium">
                 <p className="text-lead mb-8">
-                  Whether the objective is awareness, engagement, or conversion, I focus on benefits over noise.
+                  Whether your objective is awareness, engagement, or conversion, the focus stays on benefits—not noise.
                 </p>
                 
                 {/* Highlighted statement */}
@@ -125,7 +113,7 @@ export default function SkillsPage() {
                 </div>
 
                 <p className="text-body-lg">
-                  At the end of the day, my writing exists for one reason:
+                  At the end of the day, this writing exists for one reason:
                 </p>
                 
                 {/* TYPOGRAPHIC HERO - Final statement */}
@@ -139,7 +127,7 @@ export default function SkillsPage() {
                     letterSpacing: '-0.01em'
                   }}
                 >
-                  to drive people towards brands, products, and services — and <span className="relative inline-block">
+                  to drive people towards your brand, your products, and your services — and <span className="relative inline-block">
                     keep them there
                     <span className="absolute -bottom-0.5 left-0 h-px w-full bg-gold/60" />
                   </span>.

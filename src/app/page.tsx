@@ -1,14 +1,3 @@
-/**
- * Homepage
- *
- * Premium editorial copywriting portfolio homepage.
- * Typography-focused, calm, confident design.
- * 
- * Highlighted Catchphrases (typographic heroes):
- * - "Copy that thinks. Then sells."
- * - "Research. Strategy. Proposition. Ideation."
- */
-
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Link from 'next/link';
@@ -61,10 +50,11 @@ export default function Home() {
               {/* Supporting paragraph - exact copy */}
               <div className="prose-premium mb-10 max-w-[52ch] space-y-6 lg:mb-14">
                 <p className="text-lead">
-                  I&apos;m a copywriter who loves the English language and respects the hard realities of advertising.
+                  You get copy that respects the English language and understands the hard realities of advertising. 
+
                 </p>
                 <p className="text-body">
-                  Beautiful words are pointless unless they <span style={{ fontFamily: "'Tangerine', cursive", fontSize: '1.75rem', color: '#C6A96D' }}>move</span> people. And people don&apos;t move unless you understand them first.
+                  Because beautiful words are pointless unless they <span style={{ fontFamily: "'Tangerine', cursive", fontSize: '1.75rem', color: '#C6A96D' }}>move</span> people. And people don&apos;t move unless they are understood first.
                 </p>
               </div>
 
@@ -167,10 +157,10 @@ export default function Home() {
           <div className="mx-auto max-w-prose-wide">
             <div className="prose-premium space-y-8">
               <p className="text-lead">
-                I write long copy, short copy, and everything in between. Press ads that stop the page. Digital copy that earns attention. Direct response copy that nudges, pulls, and converts.
+                You get long copy, short copy, and everything in between. Press ads that stop the page. Digital copy that earns attention. Direct response copy that nudges, pulls, and converts.
               </p>
               <p className="text-body-lg">
-                My goal is simple: help brands sound clearer, smarter, and more persuasive than they did yesterday.
+                The goal is simple: help your brand sound clearer, smarter, and more persuasive than it did yesterday.
               </p>
             </div>
           </div>
@@ -191,11 +181,11 @@ export default function Home() {
               className="mb-6 inline-block text-sm tracking-[0.12em] uppercase text-charcoal-500"
               style={{ fontFamily: 'var(--font-bebas), sans-serif' }}
             >
-              My Process
+              The Process
             </span>
 
             <p className="text-lead mb-10">
-              I don&apos;t guess. I follow a process.
+              There’s no guesswork here. You get a proven process.
             </p>
 
             {/* TYPOGRAPHIC HERO - Process Words */}
@@ -215,10 +205,6 @@ export default function Home() {
               </span>. Strategy. <br className="hidden sm:block" />
               Proposition. <span className="italic">Ideation</span>.
             </h2>
-
-            <p className="text-body-lg mx-auto max-w-[48ch]">
-              That&apos;s how I arrive at ideas that matter. Ideas that talk to the right audience, in the right tone, at the right moment.
-            </p>
           </div>
         </div>
       </section>
@@ -229,10 +215,10 @@ export default function Home() {
           <div className="mx-auto max-w-prose-wide">
             <div className="prose-premium space-y-8">
               <p className="text-lead">
-                Ideas that turn products into preferences and brands into habits.
+                Ideas that speak to the right audience, in the right tone, at the right moment. Ideas that turn products into preferences and brands into habits.
               </p>
               <p className="text-body-lg">
-                If you&apos;re looking for a versatile copywriter who understands how advertising actually works, you&apos;re in the right place.
+                If you’re looking for a versatile copywriter who loves his profession, you’re exactly where you should be.
               </p>
             </div>
 

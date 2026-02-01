@@ -84,11 +84,7 @@ export default function AboutPage() {
               <div className="lg:col-span-3">
                 <div className="prose-premium space-y-8">
                   <p className="text-lead">
-                    I studied English language and literature because I love how words behave. How they persuade, provoke, soften resistance, and spark desire.
-                  </p>
-                  
-                  <p className="text-body-lg">
-                    But I didn&apos;t stop at theory. I learned the art and craft of copywriting the way it&apos;s meant to be learned — by understanding concepts, structure, audience psychology, and the commercial purpose behind every brief.
+                    You work with someone who has studied English language and literature and understands how words behave. How they persuade, provoke, reduce resistance, and spark desire. But this isn’t theory-driven writing. It’s craft learned the right way—through concepting principles, structure, audience psychology, and a clear understanding of the commercial purpose behind every brief.
                   </p>
 
                   {/* Highlighted statement */}
@@ -97,19 +93,19 @@ export default function AboutPage() {
                       className="text-subhead m-0"
                       style={{ fontFamily: 'var(--font-playfair), Georgia, serif', fontWeight: 600 }}
                     >
-                      I believe great copy is never written in isolation. It&apos;s built through <span className="relative inline-block">
-                        collaboration
+                      You benefit from a collaborative mindset. Good copy isn’t written in isolation — <span className="relative inline-block">
+                        it’s built through teamwork.
                         <span className="absolute -bottom-0.5 left-0 h-px w-full bg-gold/60" />
                       </span>.
                     </p>
                   </div>
 
                   <p className="text-body-lg">
-                    I love working with designers, planners, strategists, and fellow idea people to create work that looks as good as it sounds — and works even better.
+                    You get someone who enjoys working with designers, planners, strategists, and idea people to create work that looks as good as it sounds—and works even better.
                   </p>
 
                   <p className="text-body-lg">
-                    I&apos;m happiest in environments where I&apos;m challenged daily. Where briefs are sharp, feedback is honest, and standards are high. That&apos;s where the best writing happens.
+                    And you get a copywriter who thrives in challenging environments. Sharp briefs. Honest feedback. High standards. That’s where the strongest writing comes from.
                   </p>
                 </div>
 

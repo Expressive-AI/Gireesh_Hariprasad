@@ -1,12 +1,3 @@
-/**
- * Contact Page
- *
- * Verbatim contact copy as specified.
- * 
- * Highlighted Catchphrase:
- * - "Let's make something that works."
- */
-
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -62,7 +53,7 @@ export default function ContactPage() {
           </h1>
           
           <p className="text-lead max-w-prose">
-            If you&apos;re an ad agency or business looking for a copywriter who understands craft, collaboration, and commercial outcomes, I&apos;d love to talk.
+            If you&apos;re an ad agency or business looking for a copywriter who understands craft, collaboration, and commercial outcomes, this is where the conversation begins.
           </p>
         </section>
 
@@ -73,7 +64,7 @@ export default function ContactPage() {
               {/* Left Column - Contact Info */}
               <div>
                 <p className="text-body-lg mb-10">
-                  Whether it&apos;s a role, a project, or a conversation that leads somewhere interesting — let&apos;s start it.
+                  Whether it’s a role, a project, or an idea worth exploring—start here.
                 </p>
                 
                 {/* Phone */}
@@ -132,7 +123,7 @@ export default function ContactPage() {
                 {/* Closing statement */}
                 <div className="rounded-xl border border-gold/30 bg-gold/5 p-6">
                   <p className="text-body text-charcoal-600 m-0">
-                    If you believe good writing still matters — and should be challenged every day — we&apos;ll get along just fine.
+                    If you believe good writing still matters—and deserves to be challenged every day—you’ll feel right at home working together.
                   </p>
                 </div>
               </div>
